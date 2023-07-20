@@ -1,8 +1,20 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Yeseva+One&display=swap');
+/* font-family: 'Quicksand', sans-serif;
+font-family: 'Yeseva One', cursive; */
+
+/* VARIABLES */
+:root {
+    --orange: #F69D4B;
+    --green: #A2DE96;
+    --white: #FEFEFE;
+    --black: #1F1B3B;
+    --grey: #E7E7E7;   
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Quicksand', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
