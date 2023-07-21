@@ -1,0 +1,51 @@
+.header {
+    background-color: #FEF4EB;
+    border-radius: 0 0 67px 67px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.header .logo {
+  width: 100px;
+}
+
+.header .basketLogo {
+  width: 50px;
+  height: 50px;
+  fill: var(--orange);
+}
+
+.header .basketLink {
+  background-color: #fad4b1;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  filter: drop-shadow(0px 4px 0px #F69D4B);
+}
+
+.header .basketLink:hover {
+    filter: none;
+    transform: translateY(2px);
+}
+
+@media (max-width: 800px) {
+
+  .header .logo {
+    width: 60px;
+  }
+
+  .header .basketLogo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header .basketLink {
+    width: 60px;
+    height: 60px;
+  }
+
+}
