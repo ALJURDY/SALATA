@@ -1,0 +1,13 @@
+.header .logo {
+  width: 120px;
+}
+
+.header .basketLogo {
+  width: 46px;
+  height: 53px;
+  fill: var(--orange)
+}
+
+.header .basketLink {
+  background-color: #fad4b1;
+}
