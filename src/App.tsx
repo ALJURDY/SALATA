@@ -1,11 +1,14 @@
-
+import { Outlet } from 'react-router-dom';
 import './App.css';
-import Hero from './components/Hero/Hero';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <>
-    <Hero/>
+    <Header />
+    <Outlet />
+    <Footer />
     </>
 
   );
