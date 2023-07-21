@@ -5,6 +5,7 @@ import BasketPage from "./pages/BasketPage"
 import PaymentPage from "./pages/PaymentPage"
 import ProductDetailsPage from "./pages/ProductDetailsPage"
 import ErrorPage from "./pages/ErrorPage"
+import SummaryPage from "./pages/SummaryPage"
 
 const AppRouter = () => {
 
@@ -31,8 +32,8 @@ const AppRouter = () => {
                     element: <ProductDetailsPage />
                 },
                 {
-                    path: "/payment",
-                    element: <PaymentPage />
+                    path: "/summary",
+                    element: <SummaryPage />
                 }
             ]
         }
