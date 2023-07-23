@@ -28,6 +28,7 @@ const AppRouter = () => {
                 },
                 {
                     path: "/products/:id",
+                    loader: ProductDetailsPage,
                     element: <ProductDetailsPage />
                 },
                 {
@@ -39,7 +40,9 @@ const AppRouter = () => {
     ])
 
   return (
+    <>
     <RouterProvider router={router}/>
+    </>
   )
 }
 
