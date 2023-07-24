@@ -21,6 +21,7 @@ body {
 
 main{
   margin: 0 50px;
+  padding-top: 120px;
 }
 
 /* Pour que tous les titres aient la même taille */

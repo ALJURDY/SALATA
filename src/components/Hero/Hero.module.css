@@ -4,7 +4,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
+    background-color: #FEF4EB;
+    border-radius: 0 0 67px 67px;
+    padding: 20px 50px;
+    margin: 70px auto;
 }
 
 .HeroMenthe{
