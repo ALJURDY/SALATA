@@ -7,15 +7,15 @@
     height: 100vh;
 }
 
-.menthe{
+.HeroMenthe{
     color: var(--green);
 }
 
-.tangerine{
+.HeroTangerine{
     color: var(--orange);
     
 }
-.commande{
+.HeroCommande{
     border-radius: 22px;
     background: #FFF;
     box-shadow: 0px 4px 0px 0px rgba(246, 157, 75, 0.36);
@@ -28,14 +28,14 @@
     font-weight: 700;
 }
 
-.flecheSvg{
+.HeroFlecheSvg{
     width: 42px;
     height: 42px;
     padding: 5px 6px 0 29px;
 
 }
 
-.imghome{
+.HeroImghome{
     width: 50%;
 }
 
