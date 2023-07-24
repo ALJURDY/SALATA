@@ -1,6 +1,10 @@
-main{
+.HeroMain{
     font-family: 'Yeseva One', cursive;
     color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
 }
 
 .menthe{
@@ -35,14 +39,8 @@ main{
     width: 50%;
 }
 
-main{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-}
 
-section{
+.HeroSection{
     font-size: 40px;
     width: 80%;
 }
