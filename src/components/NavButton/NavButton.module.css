@@ -1,0 +1,21 @@
+.NavButton {
+    border-radius: 22px;
+    border-color: var(--green);
+    border-bottom-width:5px;
+    background:var(--green) ;
+    text-decoration: none;
+    color: var(--black);
+    padding: 12px 25px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+.NavButton:focus {
+  outline: none;
+}
+
+.NavButton:active {
+  transform: translateY(2px);
+}
