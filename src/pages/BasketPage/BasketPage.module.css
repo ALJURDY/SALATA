@@ -1,0 +1,32 @@
+.basketPageContainer {
+    display: flex;
+    gap: 80px;
+}
+
+.basketPageContainer .basketList {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.basketPageContainer .basketSummary {
+    width: 30%;
+    font-size: clamp(18px, 3vw, 25px);
+    text-align: right;
+}
+
+.basketPageContainer .basketSummary hr {
+    height: 3px;
+    background-color: #E7E7E7;
+    border: none;
+}
+
+.basketSummary .prepa {
+    font-size: 20px;
+    color: #909EA7;
+}
+
+.basketSummary .quantityAndPrice {
+    margin-top: 0;
+}

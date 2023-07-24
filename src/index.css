@@ -19,11 +19,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 main{
   margin: 0 50px;
+  padding-top: 120px;
+}
+
+/* Pour que tous les titres aient la même taille */
+h2 {
+  font-family: 'Yeseva One', cursive;
+  font-size: clamp(20px, 3vw, 35px);
 }

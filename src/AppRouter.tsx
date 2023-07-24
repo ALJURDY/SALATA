@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import App from "./App"
 import HomePage from "./pages/HomePage"
-import BasketPage from "./pages/BasketPage"
+import BasketPage from "./pages/BasketPage/BasketPage"
 import PaymentPage from "./pages/PaymentPage"
 import ProductDetailsPage from "./pages/ProductDetailsPage"
 import ErrorPage from "./pages/ErrorPage"

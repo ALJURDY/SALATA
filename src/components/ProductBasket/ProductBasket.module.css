@@ -1,0 +1,46 @@
+.basketCard  {
+    background-color: #F5F5F5;
+    border-radius: 35px;
+    display: flex;
+    gap: 30px;
+    padding-right: 20px;
+}
+
+.basketCard p, .basketCard h3 {
+    margin: 0;
+}
+
+.basketCard .image {
+    width: 30%;
+    border-radius: 35px;
+    object-fit: cover;
+}
+
+.basketCard .right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 10px;
+}
+
+.basketCard .cross {
+    width: 20px;
+}
+
+.basketCard .cross:hover {
+    cursor: pointer;
+}
+
+.basketCard .topline, .basketCard .bottomline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.extras {
+    height: 70px;
+}
+
+.basketCard .underlined {
+    text-decoration: underline;
+}
