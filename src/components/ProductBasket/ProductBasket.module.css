@@ -37,8 +37,13 @@
     justify-content: space-between;
 }
 
-.extras {
+.basketCard .extras {
     height: 70px;
+}
+
+.basketCard .price, .basketCard .productName {
+    font-size: clamp(20px, 3vw, 15px);
+    font-weight: bold;
 }
 
 .basketCard .underlined {

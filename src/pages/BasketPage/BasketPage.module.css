@@ -11,9 +11,11 @@
 }
 
 .basketPageContainer .basketSummary {
-    width: 30%;
+    width: 20%;
     font-size: clamp(18px, 3vw, 25px);
     text-align: right;
+    position: fixed;
+    right: 50px;
 }
 
 .basketPageContainer .basketSummary hr {
