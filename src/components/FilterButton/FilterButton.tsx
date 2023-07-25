@@ -1,32 +1,27 @@
+import { IProduct } from "../../mocks/products";
 import style from "./FilterButton.module.css"
-import { jSXElement } from "@babel/types"
 
 interface FilterButtonProps {
-    children : JSX.Element | JSX.Element[];
-  }
-
-  const productDiet: string [] = [
-    "végan",
-    "végétarien",
-    "sans porc",
-    "sans gluten",
-    "pâtes",
-    "produits de la mer"
-  ]
-
-  const productCategory: string [] = [
-    "salade",
-    "boisson",
-    "dessert"
-  ]
+  item: IProduct;
+  // category: IProduct;
+}
 
 
-export const FilterButton = (props : FilterButtonProps) => {
-    const {children} = props;
 
-    return <button />
-
-  }
-
+const FilterButton = (props: FilterButtonProps) => {
+  const { item, } = props;
+  const { diet } = item;
+  // const { cate } = category;
   
-  export default FilterButton
+  return (
+    <button className={style.FilterButtonTangerine}>
+      {diet && diet.map((regime, index) => <span key={index}>{regime}</span>)}
+      {/* {cate && cate.map((choix, index)=> <span key= {index}>{choix}</span>)} */}
+
+    </button>
+  );
+}
+
+
+
+export default FilterButton

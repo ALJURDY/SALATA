@@ -23,7 +23,7 @@ export type DietType =
   | "pâtes"
   | "produits de la mer";
 
-const PRODUCTS: IProduct[] = [
+export const PRODUCTS: IProduct[] = [
   {
     id: 1,
     name: "Salade Caprese",
