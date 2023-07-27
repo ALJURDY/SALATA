@@ -1,32 +1,47 @@
-import style from "./FilterButton.module.css"
-import { jSXElement } from "@babel/types"
+import React, { useState } from "react";
+import style from "./FilterButton.module.css";
 
 interface FilterButtonProps {
-    children : JSX.Element | JSX.Element[];
-  }
+  icategory?: string;
+  icone?: string;
+  idiet?: string;
+}
 
-  const productDiet: string [] = [
-    "végan",
-    "végétarien",
-    "sans porc",
-    "sans gluten",
-    "pâtes",
-    "produits de la mer"
-  ]
+const FilterButton = (props: FilterButtonProps) => {
+  const { icategory, icone, idiet } = props;
+  const [isActive, setIsActive] = useState(false);
 
-  const productCategory: string [] = [
-    "salade",
-    "boisson",
-    "dessert"
-  ]
+  const isCategoryButton = icategory && icone;
+  const isDietButton = idiet;
 
+  const buttonClassName = isCategoryButton
+    ? style.FilterButtonMenthe
+    : isDietButton
+    ? style.FilterButtonTangerine
+    : "";
 
-export const FilterButton = (props : FilterButtonProps) => {
-    const {children} = props;
+  const manageClick = () => {
+    setIsActive(!isActive);
+  };
 
-    return <button />
+  return (
+    <section className={style.FilterButtonFlex}>
+      <button
+        className={`${buttonClassName} ${isActive ? style.active : style.FilterButtonGrey}`}
+        onClick={manageClick} 
+      >
+        {isCategoryButton && (
+          <>
+            {icone}
+            <br />
+            <br />
+            {icategory}
+          </>
+        )}
+        {isDietButton && <>{idiet}</>}
+      </button>
+    </section>
+  );
+};
 
-  }
-
-  
-  export default FilterButton
+export default FilterButton;
