@@ -4,7 +4,7 @@ export interface IProduct {
   price: number;
   description: string;
   diet: DietType[];
-  category: ProductCategoryType;
+  category?: ProductCategoryType;
   img: IProductImage;
 }
 
@@ -13,8 +13,13 @@ export interface IProductImage {
   alt: string;
 }
 
-export type ProductCategoryType = "salade" | "boisson" | "dessert";
+export interface ICategory{
+  name: string;
+  icone: string;
+}
 
+export type ProductCategoryType = "salade" | "boisson" | "dessert" ;
+ 
 export type DietType =
   | "végan"
   | "végétarien"
@@ -23,7 +28,34 @@ export type DietType =
   | "pâtes"
   | "produits de la mer";
 
-const PRODUCTS: IProduct[] = [
+export const CATEGORY: ICategory[] = [
+  {
+    name: "tout",
+    icone: "🟡",
+
+  },
+
+  {
+    name: "salade",
+    icone: "🥗",
+
+  },
+
+  {
+    name: "desserts",
+    icone: "🍰",
+
+  },
+
+  {
+    name: "boisson",
+    icone: "🍷",
+
+  },
+
+]
+
+export const PRODUCTS: IProduct[] = [
   {
     id: 1,
     name: "Salade Caprese",
