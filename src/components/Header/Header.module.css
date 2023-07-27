@@ -28,13 +28,28 @@
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  filter: drop-shadow(0px 4px 0px #f69d4b);
+  box-shadow: 0px 4px 0px #f69d4b;
   margin: 10px 50px;
+  position: relative;
 }
 
 .header .basketLink:hover {
-  filter: none;
   transform: translateY(2px);
+}
+
+.header .basketQuantityPastille {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 45px;
 }
 
 @media (max-width: 800px) {
@@ -50,5 +65,29 @@
   .header .basketLink {
     width: 60px;
     height: 60px;
+  }
+
+  .header .basketQuantityPastille {
+    width: 20px;
+    height: 20px;
+    right: 0;
+    font-size: 12px;
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header .logo {
+    width: 40px;
+  }
+
+  .header .basketLogo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header .basketLink {
+    width: 40px;
+    height: 40px;
   }
 }

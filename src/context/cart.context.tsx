@@ -65,8 +65,7 @@ const BasketProvider = (props: BasketProviderProps) => {
     );
   };
 
-
-  // TODO : retirer un basketCard du panier
+  // TODO : retirer un basketProduct du panier
 
   // TODO : changer la quantité d'un produit
 
