@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import style from "./Header.module.css";
+import { useBasketContext } from "../../context/cart.context";
 
 const Header = () => {
+  const { getBasketQuantity } = useBasketContext();
+
   return (
     <header className={style.header}>
       <Link to="/">
@@ -24,6 +27,10 @@ const Header = () => {
           </g>
           <g id="Layer_1" />
         </svg>
+
+        {getBasketQuantity() > 0 && (
+          <p className={style.basketQuantityPastille}>{getBasketQuantity()}</p>
+        )}
       </Link>
     </header>
   );
