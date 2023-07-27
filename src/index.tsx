@@ -1,15 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import AppRouter from './AppRouter';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import AppRouter from "./AppRouter";
+import BasketProvider from "./context/cart.context";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <AppRouter />
+    <BasketProvider>
+      <AppRouter />
+    </BasketProvider>
   </React.StrictMode>
 );
 

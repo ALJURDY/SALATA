@@ -1,16 +1,11 @@
-import { v4 as uuidv4 } from "uuid";
-import { IProduct } from "../../mocks/products";
 import ProductBasket from "../../components/ProductBasket/ProductBasket";
 import style from "./BasketPage.module.css";
+import { useBasketContext, IBasketProduct } from "../../context/cart.context";
+import NavButton from "../../components/NavButton/NavButton";
+import { useNavigate } from "react-router";
 
-interface BasketProduct {
-  id: string;
-  product: IProduct;
-  quantity: number;
-}
-
-// jeu de données en attendant la mise en place du context
-const fakeBasketData: BasketProduct[] = [
+// jeu de données en attendant la mise en place du bouton addToBasket()
+const fakeBasketData: IBasketProduct[] = [
   {
     id: "4d2c8dac-e9bc-47e7-85d3-8b547592e0eb",
     product: {
@@ -46,15 +41,25 @@ const fakeBasketData: BasketProduct[] = [
 ];
 
 const BasketPage = () => {
+  // products sera utilisé quand plus besoin de fakeBasketData
+  const { products, getBasketQuantity, getBasketTotal } = useBasketContext();
+
+  const navigate = useNavigate();
+  const backToHome = (): void => {
+    navigate("/")
+  }
+
+  const goToPayment = (): void => {
+    navigate("/payment")
+  }
+
   return (
     <main>
-
-      <p>ici futur bouton</p>
+      <NavButton buttonText="Continuer la commande" navigate={backToHome}/>
 
       <h2>Panier</h2>
 
       <section className={style.basketPageContainer}>
-
         {/* Liste de tous les produits du panier */}
         <section className={style.basketList}>
           {fakeBasketData.map((basketProduct) => (
@@ -65,13 +70,13 @@ const BasketPage = () => {
         {/* Récapitulatif du panier */}
         <section className={style.basketSummary}>
           <p className={style.quantityAndPrice}>
-            Quantité: x produits
+            Quantité: {getBasketQuantity()} produits
             <br />
-            <strong>Total : xx €</strong>
+            <strong>Total : {getBasketTotal().toFixed(2)} €</strong>
           </p>
           <hr />
           <p className={style.prepa}>Temps de préparation : 20min</p>
-          <p>ici futur bouton Commander</p>
+          <NavButton buttonText="Commander" navigate={goToPayment}/>
         </section>
       </section>
     </main>
