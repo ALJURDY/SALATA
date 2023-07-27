@@ -1,8 +1,9 @@
+import React from "react";
 import style from "./FilterBar.module.css";
 import FilterButton from "../FilterButton/FilterButton";
-import { DietType, ProductCategoryType } from "../../mocks/products";
+import { CATEGORY, DietType } from "../../mocks/products";
 
-const DietTypes: DietType[] = [ 
+const dietTypes: DietType[] = [
   "végan",
   "végétarien",
   "sans porc",
@@ -11,35 +12,31 @@ const DietTypes: DietType[] = [
   "produits de la mer",
 ];
 
-const ProductCategoryTypes: ProductCategoryType[] = [
-    "salade",
-    "boisson",
-    "dessert"
-];
-
-
 const FilterBar = () => {
   return (
-    <section className={style.FilterBarSection}>
-        <h2 className={style.FilterBarH2}>Quelles saveurs italiennes aujourd'hui ?</h2>
-      {DietTypes.map((dietType, index) => (
-        <FilterButton
-          key={index}
-          item={{
-            id: 0,
-            name: "",
-            price: 0,
-            description: "",
-            diet: [dietType],
-            category: "salade",
-            img: { src: "", alt: "" },
-          }}
-        />
-      ))}
-      
+    <section>
+      <h2 className={style.FilterBarH2}>Quelles saveurs italiennes aujourd'hui ?</h2>
+      <div className={style.FilterBarFlex}>
+        {/* Boucle pour les catégories */}
+        {CATEGORY.map((cat) => (
+          <div className={style.FilterBarButton} key={cat.name}>
+            {/* Utiliser les props icategory et icone pour FilterButton */}
+            <FilterButton icategory={cat.name} icone={cat.icone} />
+          </div>
+        ))}
+      </div>
+
+      <div className={style.FilterBarFlex}>
+        {/* Boucle pour les régimes */}
+        {dietTypes.map((diet, index) => (
+          <div className={style.FilterBarButton} key={index}>
+            {/* Utiliser la prop idiet pour FilterButton */}
+            <FilterButton idiet={diet} />
+          </div>
+        ))}
+      </div>
     </section>
   );
-}
+};
 
 export default FilterBar;
-

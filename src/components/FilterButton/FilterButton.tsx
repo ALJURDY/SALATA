@@ -1,27 +1,47 @@
-import { IProduct } from "../../mocks/products";
-import style from "./FilterButton.module.css"
+import React, { useState } from "react";
+import style from "./FilterButton.module.css";
 
 interface FilterButtonProps {
-  item: IProduct;
-  // category: IProduct;
+  icategory?: string;
+  icone?: string;
+  idiet?: string;
 }
-
-
 
 const FilterButton = (props: FilterButtonProps) => {
-  const { item, } = props;
-  const { diet } = item;
-  // const { cate } = category;
-  
+  const { icategory, icone, idiet } = props;
+  const [isActive, setIsActive] = useState(false);
+
+  const isCategoryButton = icategory && icone;
+  const isDietButton = idiet;
+
+  const buttonClassName = isCategoryButton
+    ? style.FilterButtonMenthe
+    : isDietButton
+    ? style.FilterButtonTangerine
+    : "";
+
+  const manageClick = () => {
+    setIsActive(!isActive);
+  };
+
   return (
-    <button className={style.FilterButtonTangerine}>
-      {diet && diet.map((regime, index) => <span key={index}>{regime}</span>)}
-      {/* {cate && cate.map((choix, index)=> <span key= {index}>{choix}</span>)} */}
-
-    </button>
+    <section className={style.FilterButtonFlex}>
+      <button
+        className={`${buttonClassName} ${isActive ? style.active : style.FilterButtonGrey}`}
+        onClick={manageClick} 
+      >
+        {isCategoryButton && (
+          <>
+            {icone}
+            <br />
+            <br />
+            {icategory}
+          </>
+        )}
+        {isDietButton && <>{idiet}</>}
+      </button>
+    </section>
   );
-}
+};
 
-
-
-export default FilterButton
+export default FilterButton;

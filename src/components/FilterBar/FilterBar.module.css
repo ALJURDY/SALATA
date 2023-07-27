@@ -1,0 +1,10 @@
+.FilterBarFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.FilterBarButton{
+    padding: 10px;
+}
