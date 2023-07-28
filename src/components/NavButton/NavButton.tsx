@@ -15,7 +15,7 @@ const NavButton = (props: NavButtonProps) => {
       className={style.NavButton}
       onClick={navigate}
     >
-      {buttonText.toUpperCase()}
+      {buttonText}
     </button>
   );
 }

@@ -1,31 +1,49 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Yeseva+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Yeseva+One&display=swap");
 /* font-family: 'Quicksand', sans-serif;
 font-family: 'Yeseva One', cursive; */
 
 /* VARIABLES */
 :root {
-    --orange: #F69D4B;
-    --green: #A2DE96;
-    --white: #FEFEFE;
-    --black: #1F1B3B;
-    --grey: #E7E7E7;   
+  --orange: #f69d4b;
+  --green: #a2de96;
+  --white: #fefefe;
+  --black: #1f1b3b;
+  --grey: #e7e7e7;
 }
 
 body {
   margin: 0;
-  font-family: 'Quicksand', 'Helvetica Neue', sans-serif;
+  font-family: "Quicksand", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-main{
+main {
   margin: 0 50px;
   padding-top: 120px;
 }
 
+h1 {
+  font-weight: normal;
+}
+
 /* Pour que tous les titres aient la même taille */
+
 h2 {
-  font-family: 'Yeseva One', cursive;
-  font-size: clamp(20px, 3vw, 35px);
+  font-family: "Yeseva One", cursive;
+  font-size: clamp(23px, 3vw, 35px);
+  font-weight: normal;
+}
+
+@media (max-width: 800px) {
+  main {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+    padding-top: 100px;
+  }
 }
