@@ -12,8 +12,10 @@ const HomePage = () => {
   return (
     <>
       <Hero />
+      <main>
       <FilterBar />
       <ProductList/>
+      </main>
       
     </>
   );
