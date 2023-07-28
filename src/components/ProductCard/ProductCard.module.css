@@ -1,0 +1,56 @@
+.ProductCardWidth{
+    width: 100%;
+    max-width: 400px;
+    min-height: 261px;
+
+}
+
+.ProductCardImages {
+    width: 100%;
+    border-radius: 35px;
+    object-fit: cover;
+}
+
+.ProductCardMargin {
+    margin-left: 50px;
+}
+
+.ProductCardName {
+    color: #1A3549;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ProductCardDescription {
+    color: #000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ProductCardDiet {
+    border-radius: 35px;
+    border: 2px solid #A2DE96;
+    background: rgba(162, 222, 150, 0.40);
+    width: 91px;
+    max-width: 100%;
+    color: rgba(31, 27, 59, 0.80);
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ProductCardFlex{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+}

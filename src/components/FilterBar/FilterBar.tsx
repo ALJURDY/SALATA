@@ -3,6 +3,7 @@ import style from "./FilterBar.module.css";
 import FilterButton from "../FilterButton/FilterButton";
 import { CATEGORY, DietType } from "../../mocks/products";
 
+// Liste des types de régimes disponibles
 const dietTypes: DietType[] = [
   "végan",
   "végétarien",
@@ -12,25 +13,28 @@ const dietTypes: DietType[] = [
   "produits de la mer",
 ];
 
+// Composant FilterBar
 const FilterBar = () => {
   return (
     <section>
+      {/* Titre de la barre de filtres */}
       <h2 className={style.FilterBarH2}>Quelles saveurs italiennes aujourd'hui ?</h2>
+
+      {/* Affichage des boutons de filtre pour les catégories */}
       <div className={style.FilterBarFlex}>
-        {/* Boucle pour les catégories */}
         {CATEGORY.map((cat) => (
           <div className={style.FilterBarButton} key={cat.name}>
-            {/* Utiliser les props icategory et icone pour FilterButton */}
+            {/* Utilisation du composant FilterButton avec les propriétés de la catégorie */}
             <FilterButton icategory={cat.name} icone={cat.icone} />
           </div>
         ))}
       </div>
 
+      {/* Affichage des boutons de filtre pour les types de régime */}
       <div className={style.FilterBarFlex}>
-        {/* Boucle pour les régimes */}
         {dietTypes.map((diet, index) => (
           <div className={style.FilterBarButton} key={index}>
-            {/* Utiliser la prop idiet pour FilterButton */}
+            {/* Utilisation du composant FilterButton avec la propriété du type de régime */}
             <FilterButton idiet={diet} />
           </div>
         ))}
