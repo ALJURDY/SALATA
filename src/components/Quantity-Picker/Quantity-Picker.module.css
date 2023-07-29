@@ -1,0 +1,51 @@
+.QuantityPicker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  padding: 10px;
+  border: 1px solid var(--green);
+  border-radius: 3px;
+}
+
+.ProductTitle {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.Quantity {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 10px;
+  min-width: 25px;
+}
+
+.Btn {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border-color: var(--gray);
+    border-bottom-width: 3px;
+    background: var(--gray);
+    line-height: 2;
+    color: var(--black);
+    font-weight: 800;
+}
+.Btn:focus {
+    outline: none;
+  }
+  
+  .Btn:active {
+    transform: translateY(2px);
+  }
