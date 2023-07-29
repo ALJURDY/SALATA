@@ -11,6 +11,7 @@
   background-color: #fce3cc;
   color: white;
   font-weight: 900;
+  font-size: clamp(10px, 3vw, 15px);
   margin: 0;
   padding: 10px 0;
 }
