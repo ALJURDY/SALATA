@@ -46,16 +46,16 @@ const BasketPage = () => {
 
   const navigate = useNavigate();
   const backToHome = (): void => {
-    navigate("/")
-  }
+    navigate("/");
+  };
 
   const goToPayment = (): void => {
-    navigate("/payment")
-  }
+    navigate("/payment");
+  };
 
   return (
     <main>
-      <NavButton buttonText="Continuer la commande" navigate={backToHome}/>
+      <NavButton buttonText="Continuer la commande" navigate={backToHome} />
 
       <h2>Panier</h2>
 
@@ -69,14 +69,16 @@ const BasketPage = () => {
 
         {/* Récapitulatif du panier */}
         <section className={style.basketSummary}>
+          <hr className={style.onlyMobileDisplay} />
           <p className={style.quantityAndPrice}>
-            Quantité: {getBasketQuantity()} produits
+            Quantité: {getBasketQuantity()} produit
+            {(getBasketQuantity() > 1 || getBasketQuantity() === 0) && "s"}
             <br />
             <strong>Total : {getBasketTotal().toFixed(2)} €</strong>
           </p>
           <hr />
           <p className={style.prepa}>Temps de préparation : 20min</p>
-          <NavButton buttonText="Commander" navigate={goToPayment}/>
+          <NavButton buttonText="Commander" navigate={goToPayment} />
         </section>
       </section>
     </main>
