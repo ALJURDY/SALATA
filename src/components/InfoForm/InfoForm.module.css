@@ -1,0 +1,97 @@
+.paymentForm h4 {
+    font-size: clamp(20px, 3vw, 25px);
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.paymentFormRow {
+    display: flex;
+}
+
+.paymentFormRow:not(:first-of-type) {
+    gap: 30px;
+}
+
+.paymentFormRow:first-of-type, .paymentFormColumn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.paymentFormRow:last-of-type {
+    gap: 100px
+}
+
+.paymentFormRadioInput {
+    display: flex;
+    gap: 10px
+}
+
+/* INPUT & LABEL STYLE */
+.infoInput {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--grey);
+    border: none;
+    border-radius: 35px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.infoInput::placeholder {
+    color: dimgray;
+    font-weight: 300;
+}
+
+.paymentForm label {
+    font-size: clamp(15px, 3vw, 17px);
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.paymentFormRadioInput input {
+    width: 40px;
+    height: 40px;
+}
+
+.paymentFormRadioInput label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.mandatoryField {
+    color: red;
+}
+
+/* LOGOS */
+
+.paymentCardLogo {
+    fill: var(--black);
+    width: 30px;
+}
+
+.payLaterLogo {
+    fill: var(--black);
+    width: 20px;
+}
+
+@media (max-width: 800px) {
+    .paymentFormRow {
+        flex-direction: column;
+    }
+
+    .paymentFormRow:not(:first-of-type) {
+        gap: 0;
+    }
+
+    .paymentFormRow:last-of-type {
+        gap: 10px;
+    }
+
+    .infoInput {
+        font-size: 12px;
+        padding: 15px;
+    }
+  }

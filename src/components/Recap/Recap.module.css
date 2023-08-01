@@ -1,0 +1,33 @@
+.paymentPageTitle {
+    font-size: clamp(20px, 3vw, 25px);
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.horizontalBar {
+  height: 3px;
+  background-color: #e7e7e7;
+  border: none;
+}
+
+.prepaRecapInfo {
+  font-size: clamp(14px, 3vw, 17px);
+  color: #909ea7;
+  margin-bottom: 30px;
+}
+
+.productListRecap {
+    list-style: none;
+    padding: 0;
+}
+
+.productListRecap li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+
+  .horizontalBar {
+    width: 100%;
+  }
+}
