@@ -1,4 +1,5 @@
 import { IProduct } from "../../mocks/products";
+import QuantityPicker from "../Quantity-Picker/Quantity-Picker";
 import style from "./ProductBasket.module.css";
 
 interface ProductBasketProps {
@@ -40,7 +41,7 @@ const ProductBasket = (props: ProductBasketProps) => {
         {/* Prix et Quantity Picker */}
         <div className={style.bottomline}>
           <p className={style.price}>{product.price.toFixed(2)} €</p>
-          <div>Quantity Picker</div>
+          <QuantityPicker />
         </div>
       </div>
     </article>
