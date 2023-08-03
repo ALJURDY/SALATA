@@ -1,18 +1,24 @@
 import { useState } from "react";
 import style from "./Quantity-Picker.module.css";
 
-const QuantityPicker = () => {
+interface QuantityPickerProps {
+    onChange: (newQuantity: number) => void;
+  }
+
+  const QuantityPicker: React.FC<QuantityPickerProps> = ({ onChange }) => {
     const [quantity, setQuantity] = useState(1);
 
     const add = () => {
         const newQuantity = quantity + 1;
         setQuantity(newQuantity);
+        onChange(newQuantity);
     }
 
     const remove = () => {
         if (quantity <= 0) return
         const newQuantity = quantity - 1;
         setQuantity(newQuantity);
+        onChange(newQuantity);
     }
 
     return (

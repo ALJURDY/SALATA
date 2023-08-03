@@ -1,11 +1,11 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import App from "./App"
-import HomePage from "./pages/HomePage"
+import HomePage from "./pages/HomePage/HomePage"
 import BasketPage from "./pages/BasketPage/BasketPage"
-import PaymentPage from "./pages/PaymentPage"
-import ProductDetailsPage from "./pages/ProductDetailsPage"
-import ErrorPage from "./pages/ErrorPage"
-import SummaryPage from "./pages/SummaryPage"
+import PaymentPage from "./pages/PaymentPage/PaymentPage"
+import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage"
+import ErrorPage from "./pages/ErrorPage/ErrorPage"
+import SummaryPage from "./pages/SummaryPage/SummaryPage"
 
 const AppRouter = () => {
 
@@ -29,8 +29,7 @@ const AppRouter = () => {
                 },
                 {
                     path: "/products/:id",
-                    loader: ProductDetailsPage,
-                    element: <ProductDetailsPage />
+                    element: <ProductDetailsPage />,
                 },
                 {
                     path: "/summary",
