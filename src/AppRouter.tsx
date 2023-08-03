@@ -7,6 +7,7 @@ import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage"
 import ErrorPage from "./pages/ErrorPage/ErrorPage"
 import SummaryPage from "./pages/SummaryPage/SummaryPage"
 
+
 const AppRouter = () => {
 
     const router = createBrowserRouter([

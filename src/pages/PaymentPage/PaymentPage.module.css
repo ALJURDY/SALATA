@@ -1,0 +1,39 @@
+.paymentPageContainer {
+  display: flex;
+  gap: 200px;
+}
+
+.paymentPageTitle {
+  margin-bottom: 10px;
+}
+
+.paymentPageContainer .formContainer {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.paymentPageContainer .formRecap {
+  width: 30%;
+  font-size: clamp(17px, 3vw, 20px);
+  text-align: right;
+}
+
+@media (max-width: 800px) {
+  .paymentPageContainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .paymentPageContainer .formContainer {
+    width: 100%;
+  }
+
+  .paymentPageContainer .formRecap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+}

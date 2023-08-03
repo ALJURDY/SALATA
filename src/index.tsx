@@ -4,6 +4,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import AppRouter from "./AppRouter";
 import BasketProvider from "./context/cart.context";
+import PaymentProvider from "./context/payment.context";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BasketProvider>
-      <AppRouter />
+      <PaymentProvider>
+        <AppRouter />
+      </PaymentProvider>
     </BasketProvider>
   </React.StrictMode>
 );
