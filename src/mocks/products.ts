@@ -101,7 +101,7 @@ export const PRODUCTS: IProduct[] = [
     category: "salade",
     img: {
       src: "/assets/salades/mediterraneo.jpg",
-      alt: "Salade Romaine",
+      alt: "Salade Mediterraneo",
     },
   },
   {
@@ -113,7 +113,7 @@ export const PRODUCTS: IProduct[] = [
     category: "salade",
     img: {
       src: "/assets/salades/palermo.jpg",
-      alt: "Salade Romaine",
+      alt: "Salade Palermo",
     },
   },
   {
@@ -125,7 +125,7 @@ export const PRODUCTS: IProduct[] = [
     category: "salade",
     img: {
       src: "/assets/salades/toscane.jpg",
-      alt: "Salade Romaine",
+      alt: "Salade Toscane",
     },
   },
   {
@@ -137,7 +137,7 @@ export const PRODUCTS: IProduct[] = [
     category: "salade",
     img: {
       src: "/assets/salades/florenze.jpeg",
-      alt: "Salade Romaine",
+      alt: "Salade Florenze",
     },
   },
   {
@@ -149,7 +149,7 @@ export const PRODUCTS: IProduct[] = [
     category: "dessert",
     img: {
       src: "/assets/desserts/tiramisu.jpg",
-      alt: "Salade Romaine",
+      alt: "Tiramisù",
     },
   },
   {
@@ -161,7 +161,7 @@ export const PRODUCTS: IProduct[] = [
     category: "dessert",
     img: {
       src: "/assets/desserts/panna-cotta.jpg",
-      alt: "Salade Romaine",
+      alt: "Panna Cotta",
     },
   },
   {
@@ -173,7 +173,7 @@ export const PRODUCTS: IProduct[] = [
     category: "boisson",
     img: {
       src: "/assets/boissons/citronnade.jpg",
-      alt: "Salade Romaine",
+      alt: "Citronnade maison",
     },
   },
   {
@@ -185,7 +185,7 @@ export const PRODUCTS: IProduct[] = [
     category: "boisson",
     img: {
       src: "/assets/boissons/coca.jpg",
-      alt: "Salade Romaine",
+      alt: "Coca cola",
     },
   },
 ];

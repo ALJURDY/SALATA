@@ -1,0 +1,106 @@
+main {
+    margin-top: 40px;
+}
+
+.productDetails {
+    display: flex;
+    gap: 80px;
+}
+
+.productContent {
+    display: flex;
+    align-items: flex-start;
+}
+
+.productImage {
+    width: 33%;
+    border-radius: 10vh;
+    padding: 30px;
+}
+
+.detailsContainer {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.productHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ingredientBar {
+    width: 100%;
+    padding: 20px;
+}
+
+.Ingredients {
+    width: 90%;
+    border: none;
+    border-radius: 22px;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.arrowDown,
+.arrowUp {
+    
+    width: 20px;
+    height: 20px;
+    margin-left:35%;
+
+}
+
+.retirer {
+    margin-left: 5px;
+    text-decoration: underline;
+    
+
+}
+
+.actionsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quantityPicker {
+    margin-left: 40%;
+    margin-top: 20px;
+}
+
+.subActions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.addToBasket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 22px;
+    border-color: var(--orange);
+    border-bottom-width: 5px;
+    background: var(--orange);
+    text-decoration: none;
+    color: var(--black);
+    padding: 12px 25px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+}
+
+.addToBasket:focus {
+    outline: none;
+}
+
+.addToBasket:active {
+    transform: translateY(2px);
+}
