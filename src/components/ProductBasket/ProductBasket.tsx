@@ -6,8 +6,10 @@ interface ProductBasketProps {
   product: IProduct;
 }
 
-const ProductBasket = (props: ProductBasketProps) => {
-  const { product } = props;
+const ProductBasket: React.FC<ProductBasketProps> = ({ product }) => {
+  const handleQuantityChange = () => {
+    
+  };
 
   return (
     <article className={style.basketCard}>
@@ -41,7 +43,7 @@ const ProductBasket = (props: ProductBasketProps) => {
         {/* Prix et Quantity Picker */}
         <div className={style.bottomline}>
           <p className={style.price}>{product.price.toFixed(2)} €</p>
-          <QuantityPicker />
+          <QuantityPicker value={1} onChange={handleQuantityChange} />
         </div>
       </div>
     </article>
