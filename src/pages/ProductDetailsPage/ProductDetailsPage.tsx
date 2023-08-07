@@ -25,7 +25,7 @@ const ProductDetailsPage = () => {
 
 
   const navigateToBasket = () => {
-    navigate('/BasketPage');
+    navigate('/basket');
   };
 
   if (!product) {
@@ -49,6 +49,15 @@ const ProductDetailsPage = () => {
   const handleQuantityChange = (newQuantity: number) => {
     setQuantity(newQuantity);
   };
+
+  const formatPrice = (price: number) => {
+    return price.toLocaleString('fr-FR', {
+      style: 'currency',
+      currency: 'EUR',
+    });
+  };
+
+  const productPrice = formatPrice(product.price);
 
   const totalPrice = (product.price * quantity + selectedIngredients.reduce((total, ingredient) => total + ingredient.price, 0) * quantity).toLocaleString('fr-FR', {
     style: 'currency',
@@ -78,7 +87,7 @@ const ProductDetailsPage = () => {
           <div className={Style.detailsContainer}>
             <div className={Style.productHeader}>
               <h2 className={Style.productName}>{product.name}</h2>
-              <h2 className={Style.productPrice}>{product.price}€</h2>
+              <h2 className={Style.productPrice}>{productPrice}</h2>
             </div>
             <h3 className={Style.productdescription}>{product.description}</h3>
             <strong>Personnalisez votre salade :</strong>

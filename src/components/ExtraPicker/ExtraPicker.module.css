@@ -1,0 +1,21 @@
+.Ingredients{
+    border: none;
+    border-radius: 22px;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-family:'Quicksand', sans-serif ;
+}
+
+.arrowDown,.arrowUp{
+    width: 20px;
+    height: 20px;
+    padding: 5px 5px 0 30px;
+
+}
+.retirer{
+    margin-left: 5px;
+    text-decoration: underline;
+
+}
