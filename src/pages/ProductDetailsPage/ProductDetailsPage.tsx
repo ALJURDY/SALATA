@@ -24,8 +24,8 @@ const ProductDetailsPage = () => {
   const product = PRODUCTS.find((p) => p.id === productId);
 
 
-  const navigateToBasket = () => {
-    navigate('/basket');
+  const navigateToHome = () => {
+    navigate('/#Commande');
   };
 
   if (!product) {
@@ -79,7 +79,7 @@ const ProductDetailsPage = () => {
 
   return (
     <main>
-      <NavButton buttonText="Continuer la commande" navigate={navigateToBasket} />
+      <NavButton buttonText="Continuer la commande" navigate={navigateToHome} />
 
       <section className={Style.productDetails}>
         <div className={Style.productContent}>
