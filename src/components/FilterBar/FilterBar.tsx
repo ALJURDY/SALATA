@@ -16,10 +16,10 @@ const dietTypes: DietType[] = [
 // Composant FilterBar
 const FilterBar = () => {
   return (
-    <section>
+    
+    <section id="Commande"> {/* Ancre du bouton "Je Commande !" n'arrive pas au bon endroit pour le moment */}
       {/* Titre de la barre de filtres */}
       <h2 className={style.FilterBarH2}>Quelles saveurs italiennes aujourd'hui ?</h2>
-
       {/* Affichage des boutons de filtre pour les catégories */}
       <div className={style.FilterBarFlex}>
         {CATEGORY.map((cat) => (
