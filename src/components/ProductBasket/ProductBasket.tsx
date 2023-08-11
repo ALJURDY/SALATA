@@ -42,7 +42,7 @@ const ProductBasket: React.FC<ProductBasketProps> = ({ product }) => {
 
         {/* Prix et Quantity Picker */}
         <div className={style.bottomline}>
-          <p className={style.price}>{product.price.toFixed(2)} €</p>
+          <p className={style.price}>{product.price.toFixed(2).replace(".", ",")} €</p>
           <QuantityPicker value={1} onChange={handleQuantityChange} />
         </div>
       </div>
