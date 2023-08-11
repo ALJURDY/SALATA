@@ -4,42 +4,6 @@ import style from "./Recap.module.css";
 import { IBasketProduct, useBasketContext } from "../../context/basket.context";
 import { usePaymentContext } from "../../context/payment.context";
 
-// jeu de données en attendant la mise en place du bouton addToBasket()
-const fakeBasketData: IBasketProduct[] = [
-  {
-    id: "4d2c8dac-e9bc-47e7-85d3-8b547592e0eb",
-    product: {
-      id: 1,
-      name: "Salade Caprese",
-      price: 11,
-      description: "Tomates, mozza, basilic, asperges, jambon cru",
-      diet: ["sans gluten"],
-      category: "salade",
-      img: {
-        src: "/assets/salades/caprese.jpg",
-        alt: "Salade Caprese",
-      },
-    },
-    quantity: 2,
-  },
-  {
-    id: "80585f95-b1ab-4d0a-8778-3bfe6cd91c83",
-    product: {
-      id: 10,
-      name: "Citronnade maison",
-      price: 3,
-      description: "Citrons frais, limonade bio",
-      diet: [],
-      category: "boisson",
-      img: {
-        src: "/assets/boissons/citronnade.jpg",
-        alt: "Salade Romaine",
-      },
-    },
-    quantity: 3,
-  },
-];
-
 const Recap = () => {
   const { products, getBasketQuantity, getBasketTotal } = useBasketContext();
   const { formData, isFormValid } = usePaymentContext();
@@ -50,10 +14,6 @@ const Recap = () => {
       console.log("Formulaire soumis avec succès !", formData);
       navigate("/summary");
     }
-  };
-
-  const submitForm = () => {
-    
   };
 
   return (
@@ -67,7 +27,7 @@ const Recap = () => {
         </strong>
       </p>
       <ul className={style.productListRecap}>
-        {fakeBasketData.map((basketProduct) => (
+        {products.map((basketProduct) => (
           <li>
             {basketProduct.product.name} x {basketProduct.quantity}
           </li>
