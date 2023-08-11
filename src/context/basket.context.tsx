@@ -27,9 +27,6 @@ const defaultBasket: IBasket = {
 
 const BasketContext = createContext<IBasket>(defaultBasket);
 
-// Créer un hook pour pouvoir utiliser le contexte
-export const useBasketContext = () => useContext(BasketContext);
-
 // PROVIDER
 interface BasketProviderProps {
   children: JSX.Element;
@@ -38,19 +35,29 @@ interface BasketProviderProps {
 const BasketProvider = (props: BasketProviderProps) => {
   const { children } = props;
 
-  const [BasketProducts, setBasketProducts] = useState<IBasketProduct[]>([]);
+  const [basketProducts, setBasketProducts] = useState<IBasketProduct[]>([]);
 
-  const addProductToBasket = (newproduct: IProduct, newquantity: number) => {
+  const addProductToBasket = (product: IProduct, quantity: number) => {
     const newBasketProduct: IBasketProduct = {
       id: uuidv4(),
-      product: newproduct,
-      quantity: newquantity,
+      product,
+      quantity,
     };
-    setBasketProducts([...BasketProducts, newBasketProduct]);
+
+    // Check if product already exists in basket
+    const foundProduct = basketProducts.find((p) => p.product === newBasketProduct.product);
+
+    if (!foundProduct) {
+      setBasketProducts([...basketProducts, newBasketProduct]);
+    } else {
+      foundProduct.quantity += 1;
+      setBasketProducts([...basketProducts])
+    }
+    console.log(basketProducts);
   };
 
   const getBasketQuantity = () => {
-    return BasketProducts.reduce(
+    return basketProducts.reduce(
       (accumulator: number, currentValue: IBasketProduct) =>
         (accumulator += currentValue.quantity),
       0
@@ -58,7 +65,7 @@ const BasketProvider = (props: BasketProviderProps) => {
   };
 
   const getBasketTotal = () => {
-    return BasketProducts.reduce(
+    return basketProducts.reduce(
       (accumulator: number, currentValue: IBasketProduct) =>
         accumulator + currentValue.product.price * currentValue.quantity,
       0
@@ -73,7 +80,7 @@ const BasketProvider = (props: BasketProviderProps) => {
 
 
   const basket: IBasket = {
-    products: [],
+    products: basketProducts,
     addProductToBasket,
     getBasketQuantity,
     getBasketTotal,
@@ -85,3 +92,4 @@ const BasketProvider = (props: BasketProviderProps) => {
 };
 
 export default BasketProvider;
+export const useBasketContext = () => useContext(BasketContext);

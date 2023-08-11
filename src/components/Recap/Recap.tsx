@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import NavButton from "../NavButton/NavButton";
 import style from "./Recap.module.css";
-import { IBasketProduct, useBasketContext } from "../../context/cart.context";
+import { IBasketProduct, useBasketContext } from "../../context/basket.context";
 import { usePaymentContext } from "../../context/payment.context";
 
 // jeu de données en attendant la mise en place du bouton addToBasket()
@@ -74,7 +74,7 @@ const Recap = () => {
         ))}
       </ul>
       <p>
-        <strong>Total : {getBasketTotal().toFixed(2)} €</strong>
+        <strong>Total : {getBasketTotal().toFixed(2).replace(".", ",")} €</strong>
       </p>
       <hr className={style.horizontalBar} />
       <p className={style.prepaRecapInfo}>
