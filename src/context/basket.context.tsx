@@ -89,7 +89,6 @@ const BasketProvider = (props: BasketProviderProps) => {
   const deleteOneProduct = (product: IProduct) => {
     const foundProduct = basketProducts.find((p) => p.product.id === product.id);
 
-    console.log("found", foundProduct);
     if (!foundProduct) {
         return;
     } else {
@@ -100,9 +99,7 @@ const BasketProvider = (props: BasketProviderProps) => {
             deleteBasketProduct(product);
             setBasketProducts([...basketProducts]);
         }
-
     }
-    const index = basketProducts.indexOf(foundProduct);
   }
 
 
