@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useBasketContext } from "../../context/basket.context";
 import { IProduct } from "../../mocks/products";
 import QuantityPicker from "../Quantity-Picker/Quantity-Picker";
@@ -11,7 +10,6 @@ interface ProductBasketProps {
 
 const ProductBasket = (props: ProductBasketProps ) => {
   const {product, quantity} = props;
-  const [productQuantity, setSelectedQuantity] = useState(quantity);
   const { deleteBasketProduct, addProductToBasket, deleteOneProduct } = useBasketContext();
 
   const deleteProduct = (product: IProduct): void => {
@@ -60,7 +58,7 @@ const ProductBasket = (props: ProductBasketProps ) => {
         {/* Prix et Quantity Picker */}
         <div className={style.bottomline}>
           <p className={style.price}>{product.price.toFixed(2).replace(".", ",")} €</p>
-          <QuantityPicker value={productQuantity} onChange={handleQuantityChange} />
+          <QuantityPicker value={quantity} onChange={handleQuantityChange} />
         </div>
       </div>
     </article>
