@@ -146,6 +146,7 @@ const ProductDetailsPage = () => {
 
           {/* Quantity Picker */}
           <div className={Style.quantityPicker}>
+          <strong className={Style.ProductTitle}>Quantité produit :</strong>
             <QuantityPicker value={quantity} onChange={handleQuantityChange} />
 
         </div>

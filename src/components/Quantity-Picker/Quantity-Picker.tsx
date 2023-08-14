@@ -16,7 +16,7 @@ interface QuantityPickerProps {
     }
 
     const remove = () => {
-        if (quantity <= 0) return
+        if (quantity <= 1) return
         const newQuantity = quantity - 1;
         setQuantity(newQuantity);
         onChange(newQuantity);
@@ -24,9 +24,8 @@ interface QuantityPickerProps {
 
     return (
         <div className={style.QuantityPicker}>
-             <p className={style.ProductTitle}>Quantité</p>
             <div className={style.controls}>
-                <button className={style.Btn} onClick={remove}>-</button>
+                <button className={style.Btn} onClick={remove} disabled={quantity === 1}>-</button>
                 <span className={style.Quantity}>{quantity.toString().padStart(2, '0')}</span>
                 <button className={style.Btn} onClick={add}>+</button>
             </div>

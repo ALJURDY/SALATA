@@ -15,6 +15,8 @@ interface IBasket {
   addProductToBasket: (product: IProduct, quantity: number) => void;
   getBasketQuantity: () => number;
   getBasketTotal: () => number;
+  deleteBasketProduct: (product: IProduct) => void;
+  deleteOneProduct: (product: IProduct) => void
 }
 
 // un panier par defaut pour éviter qu'il puisse être null
@@ -23,6 +25,8 @@ const defaultBasket: IBasket = {
   addProductToBasket: () => {},
   getBasketQuantity: () => 0,
   getBasketTotal: () => 0,
+  deleteBasketProduct: () => {},
+  deleteOneProduct: () => {}
 };
 
 const BasketContext = createContext<IBasket>(defaultBasket);
@@ -72,11 +76,34 @@ const BasketProvider = (props: BasketProviderProps) => {
     );
   };
 
-  // TODO : retirer un basketProduct du panier
+  const deleteBasketProduct = (product: IProduct) => {
+    const foundProduct = basketProducts.find((p) => p.product.id === product.id);
+        if (foundProduct) {
+            const index = basketProducts.indexOf(foundProduct);
+            basketProducts.splice(index, 1);
+            setBasketProducts([...basketProducts]);
+        }
+        return basketProducts;
+  };
 
-  // TODO : changer la quantité d'un produit
+  const deleteOneProduct = (product: IProduct) => {
+    const foundProduct = basketProducts.find((p) => p.product.id === product.id);
 
-  // TODO : bonus : prepa time selon nombre de salades
+    console.log("found", foundProduct);
+    if (!foundProduct) {
+        return;
+    } else {
+        if (foundProduct.quantity > 1) {
+            foundProduct.quantity -= 1;
+            setBasketProducts([...basketProducts]);
+        } else {
+            deleteBasketProduct(product);
+            setBasketProducts([...basketProducts]);
+        }
+
+    }
+    const index = basketProducts.indexOf(foundProduct);
+  }
 
 
   const basket: IBasket = {
@@ -84,6 +111,8 @@ const BasketProvider = (props: BasketProviderProps) => {
     addProductToBasket,
     getBasketQuantity,
     getBasketTotal,
+    deleteBasketProduct,
+    deleteOneProduct
   };
 
   return (
