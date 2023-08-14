@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { IProduct } from "../../mocks/products";
 import style from "./ProductCard.module.css";
 
@@ -10,7 +11,7 @@ interface ProductCardProps {
 const ProductCard = (props: ProductCardProps) => {
     // Extraction de la propriété 'item' des props pour faciliter l'accès aux informations du produit
     const { item } = props;
-    const { name, price, description, diet, img } = item; // Extraction des différentes propriétés du produit
+    const { id, name, price, description, diet, img } = item; // Extraction des différentes propriétés du produit
 
     // Rendu du composant ProductCard
     return (
@@ -18,7 +19,9 @@ const ProductCard = (props: ProductCardProps) => {
             {/* Conteneur d'un produit */}
             <article className={style.ProductCardWidth}>
                 {/* Image du produit */}
-                <img className={style.ProductCardImages} src={img.src} alt={img.alt} />
+                <NavLink to={`/products/${id}`} className={style.ProductCardId}>
+               <img className={style.ProductCardImages} src={img.src} alt={img.alt} /> 
+               </NavLink>
                 {/* Nom du produit et son prix */}
                 <h4 className={style.ProductCardName}>{name} <span className={style.ProductCardMargin}>{price.toFixed(2)}€</span></h4>
                 {/* Description du produit */}

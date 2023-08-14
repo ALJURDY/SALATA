@@ -5,12 +5,12 @@ import Style from './ProductDetailsPage.module.css';
 import NavButton from '../../components/NavButton/NavButton';
 import { INGREDIENTS, IIngredient } from '../../mocks/ingredients';
 import QuantityPicker from '../../components/Quantity-Picker/Quantity-Picker';
-import { useBasketContext } from '../../context/cart.context';
+import { useBasketContext } from '../../context/basket.context';
 
 const ProductDetailsPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const basketContext = useBasketContext();
+  const { addProductToBasket } = useBasketContext();
 
   const [selectedIngredients, setSelectedIngredients] = useState<IIngredient[]>([]);
   const [isIngredientListOpen, setIsIngredientListOpen] = useState(false);
@@ -24,8 +24,8 @@ const ProductDetailsPage = () => {
   const product = PRODUCTS.find((p) => p.id === productId);
 
 
-  const navigateToBasket = () => {
-    navigate('/basket');
+  const navigateToHome = () => {
+    navigate('/#Commande');
   };
 
   if (!product) {
@@ -72,14 +72,12 @@ const ProductDetailsPage = () => {
   };
 
   const addToBasket = () => {
-    if (product) {
-      basketContext.addProductToBasket(product, quantity);
-    }
+      addProductToBasket(product, quantity);
   };
 
   return (
     <main>
-      <NavButton buttonText="Continuer la commande" navigate={navigateToBasket} />
+      <NavButton buttonText="Continuer la commande" navigate={navigateToHome} />
 
       <section className={Style.productDetails}>
         <div className={Style.productContent}>
