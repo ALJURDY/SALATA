@@ -3,6 +3,8 @@ import NavButton from "../../components/NavButton/NavButton";
 import style from "./PaymentPage.module.css";
 import InfoForm from "../../components/InfoForm/InfoForm";
 import Recap from "../../components/Recap/Recap";
+import SummaryPage from "../SummaryPage/SummaryPage";
+
 
 const PaymentPage = () => {
   const navigate = useNavigate();
