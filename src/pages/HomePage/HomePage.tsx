@@ -1,23 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero from "../../components/Hero/Hero";
 import {PRODUCTS } from "../../mocks/products";
 import FilterBar from "../../components/FilterBar/FilterBar";
 import ProductList from "../../components/ProductList/ProductList";
 
-const HomePage = () => {
-  // Sélectionnez un produit spécifique pour passer à FilterButton
-  const dietToDisplay = PRODUCTS[0]; 
 
-  return (
-    <>
-      <Hero />
-      <main>
-      <FilterBar />
-      <ProductList/>
-      </main>
-      
-    </>
-  );
-};
+  const HomePage = () => {
+    const [selectedCategory, setSelectedCategory] = useState<string | null>("tout");
+  
+    const handleSetSelectedCategory = (category: string | null) => {
+      setSelectedCategory(category);
+    };
+  
+    return (
+      <>
+        <Hero />
+        <main>
+          <FilterBar
+            setSelectedCategory={handleSetSelectedCategory}
+            activeCategory={selectedCategory}
+          />
+          <ProductList selectedCategory={selectedCategory === "tout" ? null : selectedCategory} />
+        </main>
+      </>
+    );
+  };  
 
-export default HomePage;
+export default HomePage

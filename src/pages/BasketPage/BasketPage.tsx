@@ -4,6 +4,43 @@ import { useBasketContext } from "../../context/basket.context";
 import NavButton from "../../components/NavButton/NavButton";
 import { useNavigate } from "react-router";
 
+// jeu de données en attendant la mise en place du bouton addToBasket()
+const fakeBasketData: IBasketProduct[] = [
+  {
+    id: "4d2c8dac-e9bc-47e7-85d3-8b547592e0eb",
+    product: {
+      id: 1,
+      name: "Salade Caprese",
+      price: 11,
+      description: "Tomates, mozza, basilic, asperges, jambon cru",
+      diet: ["sans gluten"],
+      category: "salades",
+      img: {
+        src: "/assets/salades/caprese.jpg",
+        alt: "Salade Caprese",
+      },
+    },
+    quantity: 2,
+  },
+  {
+    id: "80585f95-b1ab-4d0a-8778-3bfe6cd91c83",
+    product: {
+      id: 10,
+      name: "Citronnade maison",
+      price: 3,
+      description: "Citrons frais, limonade bio",
+      diet: [],
+      category: "boissons",
+      img: {
+        src: "/assets/boissons/citronnade.jpg",
+        alt: "Salade Romaine",
+      },
+    },
+    quantity: 3,
+  },
+];
+
+
 const BasketPage = () => {
   // products sera utilisé quand plus besoin de fakeBasketData
   const { products, getBasketQuantity, getBasketTotal } = useBasketContext();
