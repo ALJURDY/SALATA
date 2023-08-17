@@ -1,43 +1,39 @@
 import React, { useState } from "react";
 import style from "./FilterButton.module.css";
 
-// Interface des propriétés du composant FilterButton
 interface FilterButtonProps {
   icategory?: string;
   icone?: string;
   idiet?: string;
+  onClick?: () => void;
+  isActive?: boolean;
 }
 
-// Composant FilterButton
 const FilterButton = (props: FilterButtonProps) => {
-  // Destructuration des propriétés pour un accès plus facile
-  const { icategory, icone, idiet } = props;
+  const { icategory, icone, idiet, isActive: externalIsActive } = props;
+  const [isActive, setIsActive] = useState(externalIsActive || false);
 
-  // État pour suivre si le bouton est actif ou non
-  const [isActive, setIsActive] = useState(false);
-
-  // Vérifier si le bouton représente une catégorie avec une icône ou un régime sans icône
   const isCategoryButton = icategory && icone;
   const isDietButton = idiet;
 
-  // Déterminer la classe CSS appropriée en fonction du type de bouton et de son état actif
   const buttonClassName = isCategoryButton
     ? style.FilterButtonMenthe
     : isDietButton
     ? style.FilterButtonTangerine
     : "";
 
-  // Gérer le clic sur le bouton pour changer l'état actif
-  const manageClick = () => {
-    setIsActive(!isActive);
-  };
+  const buttonStyle = isActive
+    ? style.active
+    : style.FilterButtonGrey; // Utilise FilterButtonGrey pour le style inactif
 
-  // Retourne le composant FilterButton avec le bouton approprié et son contenu
   return (
     <section className={style.FilterButtonFlex}>
       <button
-        className={`${buttonClassName} ${isActive ? style.active : style.FilterButtonGrey}`}
-        onClick={manageClick} 
+        className={`${buttonClassName} ${buttonStyle}`}
+        onClick={() => {
+          props.onClick && props.onClick();
+          setIsActive(!isActive);
+        }}
       >
         {isCategoryButton && (
           <>
@@ -54,4 +50,3 @@ const FilterButton = (props: FilterButtonProps) => {
 };
 
 export default FilterButton;
-

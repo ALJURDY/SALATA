@@ -14,7 +14,7 @@ const fakeBasketData: IBasketProduct[] = [
       price: 11,
       description: "Tomates, mozza, basilic, asperges, jambon cru",
       diet: ["sans gluten"],
-      category: "salade",
+      category: "salades",
       img: {
         src: "/assets/salades/caprese.jpg",
         alt: "Salade Caprese",
@@ -30,7 +30,7 @@ const fakeBasketData: IBasketProduct[] = [
       price: 3,
       description: "Citrons frais, limonade bio",
       diet: [],
-      category: "boisson",
+      category: "boissons",
       img: {
         src: "/assets/boissons/citronnade.jpg",
         alt: "Salade Romaine",
