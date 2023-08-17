@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./Header.module.css";
-import { useBasketContext } from "../../context/cart.context";
+import { useBasketContext } from "../../context/basket.context";
 
 const Header = () => {
   const { getBasketQuantity } = useBasketContext();

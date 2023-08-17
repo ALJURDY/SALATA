@@ -17,11 +17,11 @@ const ProductCard = (props: ProductCardProps) => {
     return (
         <>
             {/* Conteneur d'un produit */}
+            <NavLink to={`/products/${id}`} className={style.ProductCardId}>
             <article className={style.ProductCardWidth}>
                 {/* Image du produit */}
-                <NavLink to={`/products/${id}`} className={style.ProductCardId}>
+                
                <img className={style.ProductCardImages} src={img.src} alt={img.alt} /> 
-               </NavLink>
                 {/* Nom du produit et son prix */}
                 <h4 className={style.ProductCardName}>{name} <span className={style.ProductCardMargin}>{price.toFixed(2)}€</span></h4>
                 {/* Description du produit */}
@@ -35,6 +35,7 @@ const ProductCard = (props: ProductCardProps) => {
                     ))}
                 </div>
             </article>
+            </NavLink>
         </>
     );
 }

@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router";
 import NavButton from "../NavButton/NavButton";
 import style from "./Recap.module.css";
-import { IBasketProduct, useBasketContext } from "../../context/cart.context";
+import { IBasketProduct, useBasketContext } from "../../context/basket.context";
 import { usePaymentContext } from "../../context/payment.context";
+
 
 // jeu de données en attendant la mise en place du bouton addToBasket()
 const fakeBasketData: IBasketProduct[] = [
@@ -52,10 +53,6 @@ const Recap = () => {
     }
   };
 
-  const submitForm = () => {
-    
-  };
-
   return (
     <>
       <h4 className={style.paymentPageTitle}>Récapitulatif</h4>
@@ -67,14 +64,14 @@ const Recap = () => {
         </strong>
       </p>
       <ul className={style.productListRecap}>
-        {fakeBasketData.map((basketProduct) => (
+        {products.map((basketProduct) => (
           <li>
             {basketProduct.product.name} x {basketProduct.quantity}
           </li>
         ))}
       </ul>
       <p>
-        <strong>Total : {getBasketTotal().toFixed(2)} €</strong>
+        <strong>Total : {getBasketTotal().toFixed(2).replace(".", ",")} €</strong>
       </p>
       <hr className={style.horizontalBar} />
       <p className={style.prepaRecapInfo}>

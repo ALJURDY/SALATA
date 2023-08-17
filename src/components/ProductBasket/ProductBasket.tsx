@@ -1,14 +1,27 @@
+import { useBasketContext } from "../../context/basket.context";
 import { IProduct } from "../../mocks/products";
 import QuantityPicker from "../Quantity-Picker/Quantity-Picker";
 import style from "./ProductBasket.module.css";
 
 interface ProductBasketProps {
   product: IProduct;
+  quantity: number
 }
 
-const ProductBasket: React.FC<ProductBasketProps> = ({ product }) => {
-  const handleQuantityChange = () => {
-    
+const ProductBasket = (props: ProductBasketProps ) => {
+  const {product, quantity} = props;
+  const { deleteBasketProduct, addProductToBasket, deleteOneProduct } = useBasketContext();
+
+  const deleteProduct = (product: IProduct): void => {
+    deleteBasketProduct(product);
+  }
+
+  const handleQuantityChange = (newQuantity: number) => {
+    if(newQuantity > quantity) {
+      addProductToBasket(product, quantity);
+    } else {
+      deleteOneProduct(product)
+    }
   };
 
   return (
@@ -26,6 +39,7 @@ const ProductBasket: React.FC<ProductBasketProps> = ({ product }) => {
         {/* Nom du produit et croix pour effacer le produit */}
         <div className={style.topline}>
           <h3 className={style.productName}>{product.name}</h3>
+          <div onClick={() => deleteProduct(product)}>
           <svg className={style.cross} version="1.1" viewBox="0 0 36 36">
             <g id="Layer_1" />
             <g id="icons">
@@ -35,6 +49,7 @@ const ProductBasket: React.FC<ProductBasketProps> = ({ product }) => {
               />
             </g>
           </svg>
+          </div>
         </div>
 
         {/* Ingrédients extras */}
@@ -42,8 +57,8 @@ const ProductBasket: React.FC<ProductBasketProps> = ({ product }) => {
 
         {/* Prix et Quantity Picker */}
         <div className={style.bottomline}>
-          <p className={style.price}>{product.price.toFixed(2)} €</p>
-          <QuantityPicker value={1} onChange={handleQuantityChange} />
+          <p className={style.price}>{product.price.toFixed(2).replace(".", ",")} €</p>
+          <QuantityPicker value={quantity} onChange={handleQuantityChange} />
         </div>
       </div>
     </article>

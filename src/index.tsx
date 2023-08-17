@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import AppRouter from "./AppRouter";
-import BasketProvider from "./context/cart.context";
+import BasketProvider from "./context/basket.context";
 import PaymentProvider from "./context/payment.context";
 
 const root = ReactDOM.createRoot(
