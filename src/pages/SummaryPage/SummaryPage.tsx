@@ -1,7 +1,7 @@
 
 import Style from "./SummaryPage.module.css";
 import { usePaymentContext } from "../../context/payment.context";
-import { useBasketContext } from "../../context/cart.context";
+import { useBasketContext } from "../../context/basket.context";
 
 const SummaryPage = () => {
     const { formData } = usePaymentContext();
