@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./FilterBar.module.css";
 import FilterButton from "../FilterButton/FilterButton";
-import { CATEGORY, DietType } from "../../mocks/products";
+import { CATEGORY, DietType, ProductCategoryType } from "../../mocks/products";
 
-// Liste des types de régimes disponibles
+interface FilterBarProps {
+  setSelectedCategory: (category: string | null) => void;
+  activeCategory: string | null;
+}
+
 const dietTypes: DietType[] = [
   "végan",
   "végétarien",
@@ -13,29 +17,45 @@ const dietTypes: DietType[] = [
   "produits de la mer",
 ];
 
-// Composant FilterBar
-const FilterBar = () => {
-  return (
-    
-    <section id="Commande"> {/* Ancre du bouton "Je Commande !" n'arrive pas au bon endroit pour le moment */}
-      {/* Titre de la barre de filtres */}
-      <h2 className={style.FilterBarH2}>Quelles saveurs italiennes aujourd'hui ?</h2>
-      {/* Affichage des boutons de filtre pour les catégories */}
-      <div className={style.FilterBarFlex}>
-        {CATEGORY.map((cat) => (
-          <div className={style.FilterBarButton} key={cat.name}>
-            {/* Utilisation du composant FilterButton avec les propriétés de la catégorie */}
-            <FilterButton icategory={cat.name} icone={cat.icone} />
-          </div>
-        ))}
-      </div>
+const FilterBar: React.FC<FilterBarProps> = ({ setSelectedCategory }) => {
+  const [activeCategory, setActiveCategory] = useState<string | null>("tout");
 
-      {/* Affichage des boutons de filtre pour les types de régime */}
+  const handleCategoryClick = (category: string) => {
+    if (category === activeCategory) {
+      setActiveCategory("tout");
+      setSelectedCategory("tout");
+    } else {
+      setActiveCategory(category);
+      setSelectedCategory(category);
+    }
+  };
+
+  return (
+    <section className={style.FilterBarSection} id="Commande">
+      <h2 className={style.FilterBarH2}>Quelles saveurs italiennes aujourd'hui ?</h2>
+      <div className={style.FilterBarFlex}>
+      {CATEGORY.map((cat) => (
+  <div className={style.FilterBarButton} key={cat.name}>
+    <FilterButton
+      icategory={cat.name}
+      icone={cat.icone}
+      isActive={activeCategory === cat.name} // Utilise isActive pour définir l'état actif
+      onClick={() => {
+        handleCategoryClick(cat.name);
+      }}
+    />
+  </div>
+))}
+      </div>
       <div className={style.FilterBarFlex}>
         {dietTypes.map((diet, index) => (
           <div className={style.FilterBarButton} key={index}>
-            {/* Utilisation du composant FilterButton avec la propriété du type de régime */}
-            <FilterButton idiet={diet} />
+            <FilterButton
+              idiet={diet}
+              onClick={() => {
+                handleCategoryClick(diet);
+              }}
+            />
           </div>
         ))}
       </div>

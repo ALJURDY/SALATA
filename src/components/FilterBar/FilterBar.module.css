@@ -8,3 +8,14 @@
 .FilterBarButton{
     padding: 10px;
 }
+
+.FilterBarH2{
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.FilterBarSection{
+    margin-top: -220px;
+    margin-bottom: 50px;
+}
