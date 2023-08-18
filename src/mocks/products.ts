@@ -1,3 +1,5 @@
+import { IIngredient } from "./ingredients";
+
 export interface IProduct {
   id: number;
   name: string;
@@ -6,6 +8,7 @@ export interface IProduct {
   diet: DietType[];
   category?: ProductCategoryType;
   img: IProductImage;
+  extras?: IIngredient[];
 }
 
 export interface IProductImage {
