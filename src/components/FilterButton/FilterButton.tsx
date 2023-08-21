@@ -11,7 +11,6 @@ interface FilterButtonProps {
 
 const FilterButton = (props: FilterButtonProps) => {
   const { icategory, icone, idiet, isActive: externalIsActive } = props;
-  const [isActive, setIsActive] = useState(externalIsActive || false);
 
   const isCategoryButton = icategory && icone;
   const isDietButton = idiet;
@@ -22,18 +21,15 @@ const FilterButton = (props: FilterButtonProps) => {
     ? style.FilterButtonTangerine
     : "";
 
-  const buttonStyle = isActive
-    ? style.active
-    : style.FilterButtonGrey; // Utilise FilterButtonGrey pour le style inactif
+  const buttonStyle = props.isActive
+    ? style.FilterButtonTangerine
+    : style.FilterButtonGrey;
 
   return (
     <section className={style.FilterButtonFlex}>
       <button
         className={`${buttonClassName} ${buttonStyle}`}
-        onClick={() => {
-          props.onClick && props.onClick();
-          setIsActive(!isActive);
-        }}
+        onClick={props.onClick}
       >
         {isCategoryButton && (
           <>

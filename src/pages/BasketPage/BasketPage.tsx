@@ -1,6 +1,6 @@
 import ProductBasket from "../../components/ProductBasket/ProductBasket";
 import style from "./BasketPage.module.css";
-import { useBasketContext } from "../../context/basket.context";
+import { IBasketProduct, useBasketContext } from "../../context/basket.context";
 import NavButton from "../../components/NavButton/NavButton";
 import { useNavigate } from "react-router";
 
