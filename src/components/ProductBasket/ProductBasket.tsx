@@ -8,8 +8,6 @@ interface ProductBasketProps {
   quantity: number;
 }
 
-
-
 const ProductBasket = (props: ProductBasketProps) => {
   const { product, quantity } = props;
   const { deleteBasketProduct, addProductToBasket, deleteOneProduct } =
@@ -54,14 +52,13 @@ const ProductBasket = (props: ProductBasketProps) => {
         </div>
 
         {/* Ingrédients extras */}
-        {product.extras && product.extras.length > 0 && (
+        {product.extras!.length > 0 && (
           <p className={style.extras}>
-            <span className={style.underlined}>Extras </span>:
+            <span className={style.underlined}>Extras</span> :{" "}
             {product.extras?.map((extra, index) => (
               <span key={extra.name}>
                 {extra.name} (+{extra.price.toFixed(2).replace(".", ",")} €)
                 {index !== product.extras!.length - 1 ? ", " : ""}
-                
               </span>
             ))}
           </p>
