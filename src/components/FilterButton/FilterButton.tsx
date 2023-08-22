@@ -21,9 +21,20 @@ const FilterButton = (props: FilterButtonProps) => {
     ? style.FilterButtonTangerine
     : "";
 
-  const buttonStyle = props.isActive
+  // Utilisation d'une variable locale pour déterminer si le bouton est actif
+  const isActive = props.isActive || (isDietButton && externalIsActive);
+  console.log("Log isActive",isActive); 
+  
+
+  // Utilisation du style approprié en fonction de la variable isActive
+  const buttonStyle = isActive
     ? style.FilterButtonTangerine
     : style.FilterButtonGrey;
+    // console.log("ButtonStyle",buttonStyle);
+    
+        
+        
+
 
   return (
     <section className={style.FilterButtonFlex}>
@@ -31,6 +42,8 @@ const FilterButton = (props: FilterButtonProps) => {
         className={`${buttonClassName} ${buttonStyle}`}
         onClick={props.onClick}
       >
+
+        
         {isCategoryButton && (
           <>
             {icone}

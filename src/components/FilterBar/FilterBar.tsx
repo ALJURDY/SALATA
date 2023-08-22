@@ -21,6 +21,11 @@ const dietTypes: DietType[] = [
 
 
 const FilterBar: React.FC<FilterBarProps> = ({ setSelectedCategory, activeCategory, setSelectedDiet, activeDiet }) => {
+  console.log("activeDiet prop:", activeDiet);
+
+  const [isDietActive, setDietActive]= useState<DietType[]>([]);
+
+
 
   const handleCategoryClick = (category: string) => {
     if (category === activeCategory) {
@@ -31,12 +36,26 @@ const FilterBar: React.FC<FilterBarProps> = ({ setSelectedCategory, activeCatego
   };
 
   const handleDietClick = (diet: DietType | null) => {
-    if (activeDiet === diet) {
+    console.log("Clicked diet:", diet);
+    if (diet === null) {
+      // Si le régime est "tout", désactive tous les régimes et réinitialise le filtrage
+      setDietActive([]);
       setSelectedDiet(null);
     } else {
-      setSelectedDiet(diet);
+      // Sinon, vérifie si le régime est déjà actif
+      if (isDietActive.includes(diet)) {
+        // Si oui, le désactive
+        const updatedDiets = isDietActive.filter(activeDiet => activeDiet !== diet);
+        setDietActive(updatedDiets);
+        setSelectedDiet(updatedDiets.length > 0 ? updatedDiets[0] : null); // Sélectionne le premier régime actif
+      } else {
+        // Sinon, l'ajoute aux régimes actifs
+        setDietActive([...isDietActive, diet]);
+        setSelectedDiet(diet);
+      }
     }
   };
+  
 
   return (
     <section className={style.FilterBarSection} id="Commande">
@@ -60,7 +79,7 @@ const FilterBar: React.FC<FilterBarProps> = ({ setSelectedCategory, activeCatego
           <div className={style.FilterBarButton} key={index}>
             <FilterButton
               idiet={diet}
-              isActive={activeDiet === diet}
+              isActive={isDietActive.includes(diet)}
               onClick={() => {
                 handleDietClick(diet);
               }}
