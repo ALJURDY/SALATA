@@ -72,8 +72,8 @@ const ProductDetailsPage = () => {
   };
 
   const addToBasket = () => {
-      addProductToBasket(product, quantity);
-      navigate("/basket");
+    addProductToBasket({ ...product, extras: selectedIngredients }, quantity);
+    navigate("/basket");
   };
 
   return (
