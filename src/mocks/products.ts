@@ -70,6 +70,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/caprese.jpg",
       alt: "Salade Caprese",
     },
+    extras: []
   },
   {
     id: 2,
@@ -82,6 +83,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/sicilienne.jpg",
       alt: "Salade Sicilienneing",
     },
+    extras: []
   },
   {
     id: 3,
@@ -94,6 +96,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/romaine.jpeg",
       alt: "Salade Romaine",
     },
+    extras: []
   },
   {
     id: 4,
@@ -106,6 +109,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/mediterraneo.jpg",
       alt: "Salade Mediterraneo",
     },
+    extras: []
   },
   {
     id: 5,
@@ -118,6 +122,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/palermo.jpg",
       alt: "Salade Palermo",
     },
+    extras: []
   },
   {
     id: 6,
@@ -130,6 +135,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/toscane.jpg",
       alt: "Salade Toscane",
     },
+    extras: []
   },
   {
     id: 7,
@@ -142,6 +148,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/florenze.jpeg",
       alt: "Salade Florenze",
     },
+    extras: []
   },
   {
     id: 8,

@@ -73,6 +73,7 @@ const ProductDetailsPage = () => {
 
   const addToBasket = () => {
       addProductToBasket(product, quantity);
+      navigate("/basket");
   };
 
   return (
