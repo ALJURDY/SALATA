@@ -88,7 +88,7 @@ export const PRODUCTS: IProduct[] = [
     name: "Salade Romaine",
     price: 11,
     description: "Thon, olives, oeufs, dés de fêta, batavia",
-    diet: ["sans porc", "végétarien", "végan", "sans gluten"],
+    diet: ["sans porc", "végétarien", "végan", "sans gluten", "produits de la mer"],
     category: "salades",
     img: {
       src: "/assets/salades/romaine.jpeg",
@@ -100,7 +100,7 @@ export const PRODUCTS: IProduct[] = [
     name: "Salade Mediterraneo",
     price: 15,
     description: "Pouple, oignons rouges, pomme de terre",
-    diet: ["sans gluten"],
+    diet: ["sans gluten", "produits de la mer"],
     category: "salades",
     img: {
       src: "/assets/salades/mediterraneo.jpg",
@@ -112,7 +112,7 @@ export const PRODUCTS: IProduct[] = [
     name: "Salade Palermo",
     price: 14,
     description: "Orange, citron, basilic, oignons rouge, croutons, saumon",
-    diet: ["sans porc"],
+    diet: ["sans porc", "produits de la mer"],
     category: "salades",
     img: {
       src: "/assets/salades/palermo.jpg",
@@ -124,7 +124,7 @@ export const PRODUCTS: IProduct[] = [
     name: "Salade Toscane",
     price: 13,
     description: "Concombres, farfalles, tomates, oignons, basilic",
-    diet: ["sans porc", "végétarien", "végan"],
+    diet: ["sans porc", "végétarien", "végan","pâtes"],
     category: "salades",
     img: {
       src: "/assets/salades/toscane.jpg",
@@ -136,7 +136,7 @@ export const PRODUCTS: IProduct[] = [
     name: "Salade Florenze",
     price: 12,
     description: "Courgette, parmesan, crème fraiche, spaghettis",
-    diet: ["sans porc", "végétarien"],
+    diet: ["sans porc", "végétarien", "pâtes"],
     category: "salades",
     img: {
       src: "/assets/salades/florenze.jpeg",

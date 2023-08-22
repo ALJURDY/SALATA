@@ -4,6 +4,8 @@ import ProductCard from "../ProductCard/ProductCard";
 import style from "./ProductList.module.css";
 
 const ProductList = ({ selectedCategory, selectedDiet }: { selectedCategory: string | null, selectedDiet: DietType | null }) => {
+  console.log("Selected Category in ProductList:", selectedCategory); // Vérifiez la valeur de la catégorie sélectionnée
+  console.log("Selected Diet in ProductList:", selectedDiet);
   // Créer un objet pour regrouper les produits par catégorie
   const productsByCategory: Record<ProductCategoryType, IProduct[]> = {
     salades: [],
