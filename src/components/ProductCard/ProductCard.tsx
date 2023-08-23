@@ -23,7 +23,10 @@ const ProductCard = (props: ProductCardProps) => {
                 
                <img className={style.ProductCardImages} src={img.src} alt={img.alt} /> 
                 {/* Nom du produit et son prix */}
-                <h4 className={style.ProductCardName}>{name} <span className={style.ProductCardMargin}>{price.toFixed(2)}€</span></h4>
+                <div className={style.ProductCardTitle}>
+                <h4 className={style.ProductCardName}>{name} </h4>
+                <h4 className={style.ProductCardPrice}>{price.toFixed(2)}€</h4>
+                </div>
                 {/* Description du produit */}
                 <p className={style.ProductCardDescription}>{description}</p>
                 {/* Liste des régimes associés au produit */}
