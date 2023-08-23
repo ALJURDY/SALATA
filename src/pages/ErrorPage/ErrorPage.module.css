@@ -1,7 +1,3 @@
-.ErrorPageSection {
-    max-height: 100vh;
-}
-
 .ErrorPageFlex {
     display: flex;
     justify-content: space-between;
@@ -24,19 +20,22 @@
 }
 
 .ErrorPageH1 {
+    margin: 0;
     color: #F69D4B;
     font-family: 'Yeseva One', cursive;
-    font-size: 200px;
+    font-size: 150px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
 .ErrorPageTexte {
+    margin: 0;
+    margin-bottom: 40px;
     color: #F69D4B;
     text-align: center;
     font-family: 'Yeseva One', cursive;
-    font-size: 50px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -48,25 +47,4 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.ErrorPageButton {
-    text-decoration: none;
-    color: rgba(31, 27, 59, 0.80);
-    text-align: center;
-    font-family: Quicksand;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 35px;
-    border: 2px solid #A2DE96;
-    background: rgba(162, 222, 150, 0.40);
-    margin: 0 auto;
-    width: 368px;
-    height: 64px;
-    flex-shrink: 0;
 }
