@@ -72,7 +72,7 @@ const ProductDetailsPage = () => {
   };
 
   const addToBasket = () => {
-    addProductToBasket({ ...product, extras: selectedIngredients }, quantity);
+    addProductToBasket({ ...product, extras: selectedIngredients }, quantity); // Passe les extras à ProductBasket
     navigate("/basket");
   };
 
