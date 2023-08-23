@@ -1,4 +1,4 @@
-.ErrorPageSection{
+.ErrorPageSection {
     max-height: 100vh;
 }
 
@@ -26,7 +26,7 @@
 .ErrorPageH1 {
     color: #F69D4B;
     font-family: 'Yeseva One', cursive;
-    font-size: 150px;
+    font-size: 200px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -51,6 +51,14 @@
 }
 
 .ErrorPageButton {
+    text-decoration: none;
+    color: rgba(31, 27, 59, 0.80);
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     display: flex;
     justify-content: center;
     align-items: center;
