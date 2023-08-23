@@ -1,4 +1,4 @@
-import { isRouteErrorResponse, useRouteError } from "react-router-dom";
+import { NavLink, isRouteErrorResponse, useRouteError } from "react-router-dom";
 import style from "./ErrorPage.module.css"
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -18,8 +18,8 @@ const ErrorPage = () => {
                </div>
 <img className={style.ErrorPageImghome} src="/assets/homepage/salata-hero.svg" alt="" />
             </div>
+            <NavLink className={style.ErrorPageButton} to="/">Retour à la page principale</NavLink>
 
-            <button className={style.ErrorPageButton}>Retour à la page principale</button>
 
             <Footer/>
             </section>
