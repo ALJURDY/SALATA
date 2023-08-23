@@ -6,6 +6,8 @@ import style from "./ProductBasket.module.css";
 interface ProductBasketProps {
   product: IProduct;
   quantity: number;
+  extras?: string
+
 }
 
 
@@ -26,6 +28,8 @@ const ProductBasket = (props: ProductBasketProps) => {
       deleteOneProduct(product);
     }
   };
+
+
 
   return (
     <article className={style.basketCard}>
@@ -60,8 +64,7 @@ const ProductBasket = (props: ProductBasketProps) => {
             {product.extras?.map((extra, index) => (
               <span key={extra.name}>
                 {extra.name} (+{extra.price.toFixed(2).replace(".", ",")} €)
-                {index !== product.extras!.length - 1 ? ", " : ""}
-                
+                {index !== (product.extras ?? []).length - 1 ? ", " : ""}
               </span>
             ))}
           </p>

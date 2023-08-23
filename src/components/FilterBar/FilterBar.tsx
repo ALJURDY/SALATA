@@ -38,7 +38,7 @@ const FilterBar: React.FC<FilterBarProps> = ({ setSelectedCategory, activeCatego
   const handleDietClick = (diet: DietType | null) => {
     console.log("Clicked diet:", diet);
     if (diet === null) {
-      // Si le régime est "tout", désactive tous les régimes et réinitialise le filtrage
+      // Désactive tous les régimes et réinitialise le filtrage
       setDietActive([]);
       setSelectedDiet(null);
     } else {
