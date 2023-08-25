@@ -11,7 +11,7 @@ const SummaryPage = () => {
 
     const navigateToHome = () => {
         navigate('/#Commande');
-      };
+    };
 
     return (
         <main>
@@ -28,24 +28,24 @@ const SummaryPage = () => {
                     Quantité : {getBasketQuantity()} produit
                     {getBasketQuantity() > 1 && "s"}
                     {products.length > 0 && (
-            <div className={Style.selectedProducts}>
-              <ul>
-                {products.map((selectedProduct) => (
-                  <li key={selectedProduct.product.id}>
-                    {selectedProduct.product.name} x{selectedProduct.quantity}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-            <div className={Style.quantity}>
-    Total: {getBasketTotal().toFixed(2).replace(".", ",")} €
-</div>
+                        <div className={Style.selectedProducts}>
+                            <ul>
+                                {products.map((selectedProduct) => (
+                                    <li key={selectedProduct.product.id}>
+                                        {selectedProduct.product.name} x{selectedProduct.quantity}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                    <div className={Style.quantity}>
+                        Total: {getBasketTotal().toFixed(2).replace(".", ",")} €
+                    </div>
 
                 </div>
             </section>
             <div className={Style.button}>
-            <NavButton buttonText="Nouvelle commande" navigate={navigateToHome} />
+                <NavButton buttonText="Nouvelle commande" navigate={navigateToHome} />
             </div>
         </main>
     );
