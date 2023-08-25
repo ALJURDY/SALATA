@@ -18,16 +18,18 @@ interface IBasket {
   getBasketTotal: () => number;
   deleteBasketProduct: (product: IProduct) => void;
   deleteOneProduct: (product: IProduct) => void;
+  clearBasket: () => void;
 }
 
 // un panier par defaut pour éviter qu'il puisse être null
 const defaultBasket: IBasket = {
   products: [],
-  addProductToBasket: () => {},
+  addProductToBasket: () => { },
   getBasketQuantity: () => 0,
   getBasketTotal: () => 0,
-  deleteBasketProduct: () => {},
-  deleteOneProduct: () => {},
+  deleteBasketProduct: () => { },
+  deleteOneProduct: () => { },
+  clearBasket: () => { }
 };
 
 const BasketContext = createContext<IBasket>(defaultBasket);
@@ -78,7 +80,7 @@ const BasketProvider = (props: BasketProviderProps) => {
         accumulator +
         (currentValue.product.price +
           getExtraTotal(currentValue.product.extras)) *
-          currentValue.quantity,
+        currentValue.quantity,
       0
     );
   };
@@ -125,6 +127,10 @@ const BasketProvider = (props: BasketProviderProps) => {
     }
   };
 
+  const clearBasket = () => {
+    setBasketProducts([]);
+  };
+
   const basket: IBasket = {
     products: basketProducts,
     addProductToBasket,
@@ -132,6 +138,7 @@ const BasketProvider = (props: BasketProviderProps) => {
     getBasketTotal,
     deleteBasketProduct,
     deleteOneProduct,
+    clearBasket,
   };
 
   return (
