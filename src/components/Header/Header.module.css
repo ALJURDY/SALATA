@@ -74,6 +74,10 @@
     font-size: 12px;
     bottom: 30px;
   }
+
+  .header{
+    border-radius: 0;
+  }
 }
 
 @media (max-width: 320px) {

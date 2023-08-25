@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Hero from "../../components/Hero/Hero";
-import { DietType, PRODUCTS } from "../../mocks/products";
+import { DietType } from "../../mocks/products";
 import FilterBar from "../../components/FilterBar/FilterBar";
 import ProductList from "../../components/ProductList/ProductList";
 
