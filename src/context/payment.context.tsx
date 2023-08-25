@@ -65,9 +65,10 @@ const PaymentProvider = (props: PaymentProviderProps) => {
   const [errors, setErrors] = useState(emptyValidationErrors);
 
   const handleChange = (e: any) => {
-    const { name, value } = e.target;
+    const { name, value, id } = e.target;
     setFormData({
       ...formData,
+      isPerCardPayment: id === 'isPerCardPayment',
       [name]: value,
     });
   };
