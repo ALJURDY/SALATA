@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70vh;
+    height: 100vh;
     background-color: #FEF4EB;
     border-radius: 0 0 67px 67px;
     padding: 20px 50px;
@@ -46,8 +46,60 @@
 
 
 .HeroSection{
-    font-size: 40px;
+    font-size: clamp(20px, 4vw, 40px);
     width: 80%;
 }
 
 
+@media (max-width:1245px){
+    .HeroCommande{
+        padding: 5px;
+    }
+    
+
+}
+
+@media (max-width:820px){
+    .HeroCommande{
+        padding: 5px;
+    }
+
+    .HeroMain{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-width: 100%;
+    }
+
+    .HeroImghome{
+        width: 50%;
+        margin-top: 50px;
+    }
+
+    .HeroFlecheSvg{
+        width: 27px;
+        height: 33px;
+        padding: 5px 6px 0 15px;
+    }
+}
+
+@media (max-width:693px){
+    .HeroFlecheSvg{
+        width: 27px;
+        height: 22px;
+        padding: 5px 6px 0 15px;
+    }
+}
+
+@media (max-width:435px){
+    .HeroFlecheSvg{
+        width: 20px;
+        height: 15px;
+        padding: 5px 6px 0 15px;
+    }
+
+    .HeroMain{
+        height: 100%;
+        width: 100%;
+    }
+}

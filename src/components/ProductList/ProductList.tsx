@@ -1,4 +1,3 @@
-import React from "react";
 import { IProduct, PRODUCTS, ProductCategoryType, DietType } from "../../mocks/products";
 import ProductCard from "../ProductCard/ProductCard";
 import style from "./ProductList.module.css";
