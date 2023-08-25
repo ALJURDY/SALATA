@@ -103,6 +103,7 @@ const InfoForm = () => {
         <div className={style.paymentFormRadioInput}>
           <input
             type="radio"
+            id="isPerCardPayment"
             name="isPerCardPayment"
             onChange={handleChange}
             checked
@@ -127,6 +128,7 @@ const InfoForm = () => {
         <div className={style.paymentFormRadioInput}>
           <input
             type="radio"
+            id="payLater"
             name="isPerCardPayment"
             onChange={handleChange}
           />
