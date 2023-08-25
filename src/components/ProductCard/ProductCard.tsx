@@ -20,7 +20,6 @@ const ProductCard = (props: ProductCardProps) => {
             <NavLink to={`/products/${id}`} className={style.ProductCardId}>
             <article className={style.ProductCardWidth}>
                 {/* Image du produit */}
-                
                <img className={style.ProductCardImages} src={img.src} alt={img.alt} /> 
                 {/* Nom du produit et son prix */}
                 <div className={style.ProductCardTitle}>
