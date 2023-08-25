@@ -29,7 +29,7 @@ const ProductCard = (props: ProductCardProps) => {
                 {/* Description du produit */}
                 <p className={style.ProductCardDescription}>{description}</p>
                 {/* Liste des régimes associés au produit */}
-                <div className={style.ProductCardFlex}>
+                <div className={style.ProductCardDiets}>
                     {diet.map((regime) => (
                         <div className={style.ProductCardDiet} key={regime}>
                             <p>{regime}</p>
