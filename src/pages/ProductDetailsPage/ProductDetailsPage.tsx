@@ -7,6 +7,7 @@ import { INGREDIENTS, IIngredient } from '../../mocks/ingredients';
 import QuantityPicker from '../../components/Quantity-Picker/Quantity-Picker';
 import { useBasketContext } from '../../context/basket.context';
 
+
 const ProductDetailsPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -94,6 +95,19 @@ const ProductDetailsPage = () => {
             </div>
             <h3 className={Style.productdescription}>{product.description}</h3>
 
+            <div className={Style.ProductDetailDiet}></div>
+            {product.diet && product.diet.length > 0 && (
+              <div className={Style.productDiet}>
+                <ul className={Style.listStyle}>
+                  {product.diet.map((diet) => (
+                    <li key={diet}>{diet}</li>
+                  ))}
+                </ul>
+                
+              </div>
+
+
+            )}
 
             {/* Ingredient bar */}
             {product.extras && product.extras.length > 0 && (

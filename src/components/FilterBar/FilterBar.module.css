@@ -1,19 +1,23 @@
-.FilterBarFlex{
+.FilterBarFlexCategory{
+    display: flex;
+
+}
+
+
+.FilterBarFlexDiet{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
 .FilterBarButtonCategory{
     padding: 10px;
-    display: flex;
+
 }
 
 .FilterBarButtonDiet{
     padding: 10px;
-    display: flex;
 }
 
 .FilterBarH2{
@@ -30,5 +34,10 @@
 @media (max-width:542px){
     .FilterBarH2{
         height: 100px;
+    }
+
+    .FilterBarButtonCategory{
+        padding: 5px;
+    
     }
 }
