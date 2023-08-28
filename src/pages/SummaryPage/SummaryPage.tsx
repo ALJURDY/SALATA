@@ -6,10 +6,11 @@ import NavButton from "../../components/NavButton/NavButton";
 
 const SummaryPage = () => {
     const { formData } = usePaymentContext();
-    const { products, getBasketQuantity, getBasketTotal } = useBasketContext();
+    const { products, getBasketQuantity, getBasketTotal, clearBasket } = useBasketContext();
     const navigate = useNavigate();
 
     const navigateToHome = () => {
+        clearBasket();
         navigate('/#Commande');
     };
 

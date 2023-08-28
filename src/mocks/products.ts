@@ -1,4 +1,4 @@
-import { IIngredient } from "./ingredients";
+import { IIngredient, INGREDIENTS } from "./ingredients";
 
 export interface IProduct {
   id: number;
@@ -70,7 +70,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/caprese.jpg",
       alt: "Salade Caprese",
     },
-    extras: []
+    extras:  INGREDIENTS.slice(0,25), 
   },
   {
     id: 2,
@@ -83,7 +83,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/sicilienne.jpg",
       alt: "Salade Sicilienneing",
     },
-    extras: []
+    extras:  INGREDIENTS.slice(0,25),
   },
   {
     id: 3,
@@ -96,7 +96,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/romaine.jpeg",
       alt: "Salade Romaine",
     },
-    extras: []
+    extras: INGREDIENTS.slice(0,25),
   },
   {
     id: 4,
@@ -109,7 +109,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/mediterraneo.jpg",
       alt: "Salade Mediterraneo",
     },
-    extras: []
+    extras: INGREDIENTS.slice(0,25),
   },
   {
     id: 5,
@@ -122,7 +122,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/palermo.jpg",
       alt: "Salade Palermo",
     },
-    extras: []
+    extras: INGREDIENTS.slice(0,25),
   },
   {
     id: 6,
@@ -135,7 +135,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/toscane.jpg",
       alt: "Salade Toscane",
     },
-    extras: []
+    extras: INGREDIENTS.slice(0,25),
   },
   {
     id: 7,
@@ -148,7 +148,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/florenze.jpeg",
       alt: "Salade Florenze",
     },
-    extras: []
+    extras: INGREDIENTS.slice(0,25),
   },
   {
     id: 8,
