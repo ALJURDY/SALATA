@@ -3,21 +3,15 @@ import { useBasketContext } from "../../context/basket.context";
 import NavButton from "../NavButton/NavButton";
 import style from "./PaymentModal.module.css";
 
-interface ModalProps {
-    displayModal: boolean;
-}
-
-const PaymentModal = (props: ModalProps) => {
-    const { displayModal } = props;
+const PaymentModal = () => {
   const { getBasketTotal } = useBasketContext();
   const buttonText =
     "Payer " + getBasketTotal().toFixed(2).replace(".", ",") + " €";
 
   const navigate = useNavigate();
-  const backToBasket = (): void => {
-    navigate("/basket");
+  const goToSummary = (): void => {
+    navigate("/summary");
   };
-
 
   return (
     <section className={style.modalSection}>
@@ -74,7 +68,7 @@ const PaymentModal = (props: ModalProps) => {
         </div>
       </form>
 
-      <NavButton navigate={backToBasket} buttonText={buttonText}  />
+      <NavButton navigate={goToSummary} buttonText={buttonText} />
     </section>
   );
 };

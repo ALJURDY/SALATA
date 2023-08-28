@@ -40,10 +40,6 @@
   text-align: left;
 }
 
-.displayNone {
-  display: none;
-}
-
 @media (max-width: 800px) {
 
   .horizontalBar {

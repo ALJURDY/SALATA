@@ -103,10 +103,10 @@ const InfoForm = () => {
         <div className={style.paymentFormRadioInput}>
           <input
             type="radio"
-            id="isPerCardPayment"
+            value="isPerCardPayment"
             name="isPerCardPayment"
+            defaultChecked
             onChange={handleChange}
-            checked
           />
           <label>
             Par carte bancaire
@@ -128,7 +128,7 @@ const InfoForm = () => {
         <div className={style.paymentFormRadioInput}>
           <input
             type="radio"
-            id="payLater"
+            value="payLater"
             name="isPerCardPayment"
             onChange={handleChange}
           />

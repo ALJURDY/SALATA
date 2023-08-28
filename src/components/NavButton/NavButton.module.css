@@ -18,3 +18,9 @@
 .NavButton:active {
   transform: translateY(2px);
 }
+
+.NavButtonSecondary {
+  border-color: var(--orange);
+  background: var(--orange);
+}
+

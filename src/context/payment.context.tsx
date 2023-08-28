@@ -21,7 +21,7 @@ export interface FormData {
   lastName: string;
   phoneNumber: string;
   tableNumber: number;
-  isPerCardPayment: boolean;
+  isPerCardPayment: string;
 }
 
 const emptyformData: FormData = {
@@ -30,7 +30,7 @@ const emptyformData: FormData = {
   lastName: "",
   phoneNumber: "",
   tableNumber: 0,
-  isPerCardPayment: true,
+  isPerCardPayment: "isPerCardPayment",
 };
 
 const emptyValidationErrors: ValidationErrors = {
@@ -45,7 +45,7 @@ const emptyPaymentForm: PaymentForm = {
   formData: emptyformData,
   handleChange: () => {},
   errors: emptyValidationErrors,
-  isFormValid: () => false
+  isFormValid: () => false,
 };
 
 const PaymentContext = createContext<PaymentForm>(emptyPaymentForm);
@@ -65,10 +65,9 @@ const PaymentProvider = (props: PaymentProviderProps) => {
   const [errors, setErrors] = useState(emptyValidationErrors);
 
   const handleChange = (e: any) => {
-    const { name, value, id } = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      isPerCardPayment: id === 'isPerCardPayment',
       [name]: value,
     });
   };

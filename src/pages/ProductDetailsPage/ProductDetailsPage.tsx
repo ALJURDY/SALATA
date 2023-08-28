@@ -28,6 +28,7 @@ const ProductDetailsPage = () => {
   const navigateToHome = () => {
     navigate('/#Commande');
   };
+  
 
   if (!product) {
     return <div>Produit non trouvé.</div>;
@@ -177,7 +178,7 @@ const ProductDetailsPage = () => {
         {/* Total Price */}
         <div className={Style.subActions}>
           <h3>Total : {totalPrice}</h3>
-          <button className={Style.addToBasket} onClick={addToBasket}>Ajouter à la commande</button>
+          <NavButton buttonText="Ajouter à la commande" navigate={addToBasket} buttonType='secondary' />
         </div>
       </div>
     </main>

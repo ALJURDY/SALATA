@@ -29,8 +29,8 @@ const ErrorPage = () => {
                         </div>
                         <img className={style.ErrorPageImghome} src="/assets/homepage/salata-hero.svg" alt="" />
                     </div>
-
                 </main>
+                
                 <Footer />
             </>
         )

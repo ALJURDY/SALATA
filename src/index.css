@@ -23,9 +23,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root{
+display: flex;
+flex-direction: column;
+height: 100vh;
+}
+
 main {
   margin: 0 50px;
   padding-top: 120px;
+  flex: 1;
 }
 
 h1 {

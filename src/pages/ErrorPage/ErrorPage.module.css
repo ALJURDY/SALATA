@@ -2,31 +2,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* min-height: 100vh;
+    flex: 2; */
+}
+
+.ErrorPageSection{
+    display: flex;
 }
 
 .ErrorPageImgVespa {
     width: 30%;
-    width: 368.18px;
-    height: 235.741px;
     transform: rotate(13.088deg);
-    flex-shrink: 0;
 }
 
 .ErrorPageImghome {
     width: 30%;
-    width: 392.673px;
-    height: 284.198px;
-    flex-shrink: 0;
+    object-fit: cover;
 }
 
 .ErrorPageH1 {
     margin: 0;
     color: #F69D4B;
     font-family: 'Yeseva One', cursive;
-    font-size: 150px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-size: clamp(88px, 3vw, 150px);
 }
 
 .ErrorPageTexte {
@@ -35,10 +33,7 @@
     color: #F69D4B;
     text-align: center;
     font-family: 'Yeseva One', cursive;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-size: clamp(30px, 3vw, 40px);
 }
 
 .ErrorPageBloc {
@@ -47,4 +42,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+@media (max-width:600px){
+
+    .ErrorPageImgVespa{
+        display: none;
+    }
+
+    .ErrorPageImghome {
+        display: none;
+    }
+
+    .ErrorPageFlex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ErrorPageBloc{
+        width: 100%;
+    }
+
+
+    
+    
+
 }
