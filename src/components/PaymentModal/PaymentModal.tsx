@@ -3,7 +3,12 @@ import { useBasketContext } from "../../context/basket.context";
 import NavButton from "../NavButton/NavButton";
 import style from "./PaymentModal.module.css";
 
-const PaymentModal = () => {
+interface ModalProps {
+    displayModal: boolean;
+}
+
+const PaymentModal = (props: ModalProps) => {
+    const { displayModal } = props;
   const { getBasketTotal } = useBasketContext();
   const buttonText =
     "Payer " + getBasketTotal().toFixed(2).replace(".", ",") + " €";
@@ -13,64 +18,63 @@ const PaymentModal = () => {
     navigate("/basket");
   };
 
+
   return (
     <section className={style.modalSection}>
       <h4 className={style.modalTitle}>Payer par carte</h4>
 
-      <div className={style.paymentFormRow}>
-        <label className={style.modalLabel}>
-          Nom <span className={style.mandatoryField}>*</span>
-        </label>
-        <input
-          type="cardName"
-          name="cardName"
-          placeholder="NOM"
-          value=""
-          className={style.infoInput}
-        />
-      </div>
-
-      <div className={style.paymentFormRow}>
-        <label className={style.modalLabel}>
-          Numéro de carte <span className={style.mandatoryField}>*</span>
-        </label>
-        <input
-          type="cardNumber"
-          name="cardNumber"
-          placeholder="4242 4242 4242 4242"
-          value=""
-          className={style.infoInput}
-        />
-      </div>
-
-      <div className={style.paymentFormRow}>
-        <div className={style.paymentFormColumn}>
+      <form>
+        <div className={style.paymentFormRow}>
           <label className={style.modalLabel}>
-            Date d'expiration <span className={style.mandatoryField}>*</span>
+            Nom <span className={style.mandatoryField}>*</span>
           </label>
           <input
-            type="text"
-            name="expirationDate"
-            placeholder="MM/AA"
-            value=""
+            type="cardName"
+            name="cardName"
+            placeholder="NOM"
             className={style.infoInput}
           />
         </div>
-        <div className={style.paymentFormColumn}>
+
+        <div className={style.paymentFormRow}>
           <label className={style.modalLabel}>
-            CVC <span className={style.mandatoryField}>*</span>
+            Numéro de carte <span className={style.mandatoryField}>*</span>
           </label>
           <input
-            type="text"
-            name="CVC"
-            placeholder="123"
-            value=""
+            type="cardNumber"
+            name="cardNumber"
+            placeholder="4242 4242 4242 4242"
             className={style.infoInput}
           />
         </div>
-      </div>
 
-      <NavButton navigate={backToBasket} buttonText={buttonText} />
+        <div className={style.paymentFormRow}>
+          <div className={style.paymentFormColumn}>
+            <label className={style.modalLabel}>
+              Date d'expiration <span className={style.mandatoryField}>*</span>
+            </label>
+            <input
+              type="text"
+              name="expirationDate"
+              placeholder="MM/AA"
+              className={style.infoInput}
+            />
+          </div>
+          <div className={style.paymentFormColumn}>
+            <label className={style.modalLabel}>
+              CVC <span className={style.mandatoryField}>*</span>
+            </label>
+            <input
+              type="text"
+              name="CVC"
+              placeholder="123"
+              className={style.infoInput}
+            />
+          </div>
+        </div>
+      </form>
+
+      <NavButton navigate={backToBasket} buttonText={buttonText}  />
     </section>
   );
 };

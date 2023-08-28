@@ -43,7 +43,7 @@
 @media (max-width:384px) {
 
     .FilterButtonMenthe {
-        border-radius: 30px;
+        border-radius: 25px;
         display: flex;
         justify-content: center;
         padding: 10px;

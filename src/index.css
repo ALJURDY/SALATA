@@ -12,6 +12,10 @@ font-family: 'Yeseva One', cursive; */
   --grey: #e7e7e7;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Quicksand", "Helvetica Neue", sans-serif;

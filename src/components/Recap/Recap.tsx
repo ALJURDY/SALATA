@@ -3,14 +3,19 @@ import NavButton from "../NavButton/NavButton";
 import style from "./Recap.module.css";
 import { useBasketContext } from "../../context/basket.context";
 import { usePaymentContext } from "../../context/payment.context";
+import PaymentModal from "../PaymentModal/PaymentModal";
 
 const Recap = () => {
   const { products, getBasketQuantity, getBasketTotal } = useBasketContext();
-  const { isFormValid } = usePaymentContext();
+  const { isFormValid, formData } = usePaymentContext();
   const navigate = useNavigate();
 
+  let modalDisplay = false;
+
   const submit = (): void => {
-    if (isFormValid()) {
+    if (isFormValid() && formData.isPerCardPayment === true) {
+      modalDisplay = true;
+    } else if (isFormValid() && formData.isPerCardPayment === false) {
       navigate("/summary");
     }
   };
@@ -49,6 +54,10 @@ const Recap = () => {
       <hr className={style.horizontalBar} />
       <p className={style.prepaRecapInfo}>Temps de préparation : 20min</p>
       <NavButton buttonText="Payer" navigate={submit} />
+      {/* Modale de paiement par carte */}
+      <section>
+        {/* <PaymentModal /> */}
+      </section>
     </>
   );
 };
