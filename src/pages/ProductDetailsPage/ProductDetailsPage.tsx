@@ -7,6 +7,7 @@ import { INGREDIENTS, IIngredient } from '../../mocks/ingredients';
 import QuantityPicker from '../../components/Quantity-Picker/Quantity-Picker';
 import { useBasketContext } from '../../context/basket.context';
 
+
 const ProductDetailsPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -89,6 +90,20 @@ const ProductDetailsPage = () => {
               <h2 className={Style.productPrice}>{productPrice}</h2>
             </div>
             <h3 className={Style.productdescription}>{product.description}</h3>
+
+            <div className={Style.ProductDetailDiet}></div>
+            {product.diet && product.diet.length > 0 && (
+              <div className={Style.productDiet}>
+                <ul className={Style.listStyle}>
+                  {product.diet.map((diet) => (
+                    <li key={diet}>{diet}</li>
+                  ))}
+                </ul>
+                
+              </div>
+
+
+            )}
             <strong>Personnalisez votre salade :</strong>
 
             {/* Ingredient bar */}
@@ -145,10 +160,10 @@ const ProductDetailsPage = () => {
 
       <div className={Style.actionsContainer}>
 
-          {/* Quantity Picker */}
-          <div className={Style.quantityPicker}>
+        {/* Quantity Picker */}
+        <div className={Style.quantityPicker}>
           <strong className={Style.ProductTitle}>Quantité produit :</strong>
-            <QuantityPicker value={quantity} onChange={handleQuantityChange} />
+          <QuantityPicker value={quantity} onChange={handleQuantityChange} />
 
         </div>
 

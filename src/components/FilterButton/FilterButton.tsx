@@ -36,7 +36,7 @@ const FilterButton = (props: FilterButtonProps) => {
 
 
   return (
-    <section className={style.FilterButtonFlex}>
+    
       <button
         className={`${buttonClassName} ${buttonStyle}`}
         onClick={props.onClick}
@@ -53,7 +53,7 @@ const FilterButton = (props: FilterButtonProps) => {
         )}
         {isDietButton && <>{idiet}</>}
       </button>
-    </section>
+  
   );
 };
 
