@@ -1,6 +1,7 @@
 .paymentPageContainer {
   display: flex;
   gap: 200px;
+  position: relative;
 }
 
 .paymentPageTitle {
@@ -18,6 +19,12 @@
   width: 30%;
   font-size: clamp(17px, 3vw, 20px);
   text-align: right;
+}
+
+/* MODALE */
+.modalDisplay {
+  position: absolute;
+  background-color: rgba(35, 35, 35, 0.7);
 }
 
 @media (max-width: 800px) {
