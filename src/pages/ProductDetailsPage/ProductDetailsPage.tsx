@@ -108,7 +108,6 @@ const ProductDetailsPage = () => {
 
 
             )}
-<strong>Personnalisez votre salade :</strong>
 
             {/* Ingredient bar */}
             {product.extras && product.extras.length > 0 && (
