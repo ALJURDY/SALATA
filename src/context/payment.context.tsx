@@ -5,7 +5,6 @@ interface ValidationErrors {
   firstName: string;
   lastName: string;
   phoneNumber: string;
-  tableNumber: string;
 }
 
 interface PaymentForm {
@@ -37,8 +36,7 @@ const emptyValidationErrors: ValidationErrors = {
   email: "",
   firstName: "",
   lastName: "",
-  phoneNumber: "",
-  tableNumber: "",
+  phoneNumber: ""
 };
 
 const emptyPaymentForm: PaymentForm = {
@@ -78,8 +76,7 @@ const PaymentProvider = (props: PaymentProviderProps) => {
       email: "",
       firstName: "",
       lastName: "",
-      phoneNumber: "",
-      tableNumber: "",
+      phoneNumber: ""
     };
 
     !formData.email
@@ -95,15 +92,6 @@ const PaymentProvider = (props: PaymentProviderProps) => {
       ? (newErrors.phoneNumber = "Le numéro de téléphone est obligatoire")
       : (newErrors.phoneNumber = "");
 
-    if (!formData.tableNumber) {
-      newErrors.tableNumber = "Le numéro de table est obligatoire";
-    } else if (formData.tableNumber < 1 || formData.tableNumber > 20) {
-      newErrors.tableNumber =
-        "Le numéro de table doit être compris entre 1 et 20";
-    } else {
-      newErrors.tableNumber = "";
-    }
-
     // Mettre à jour le hook des erreurs
     setErrors(newErrors);
 
@@ -112,8 +100,7 @@ const PaymentProvider = (props: PaymentProviderProps) => {
       newErrors.email === "" &&
       newErrors.firstName === "" &&
       newErrors.lastName === "" &&
-      newErrors.phoneNumber === "" &&
-      newErrors.tableNumber === ""
+      newErrors.phoneNumber === ""
     );
   };
 
