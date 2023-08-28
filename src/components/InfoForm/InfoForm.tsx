@@ -82,10 +82,7 @@ const InfoForm = () => {
         </div>
         <div className={style.paymentFormColumn}>
           <label>
-            Numéro de table{" "}
-            <span className={style.mandatoryField}>
-              * {errors.tableNumber && <span>{errors.tableNumber}</span>}
-            </span>
+            Numéro de table
           </label>
           <input
             type="number"
