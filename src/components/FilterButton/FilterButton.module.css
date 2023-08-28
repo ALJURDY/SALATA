@@ -5,7 +5,7 @@
     max-width: 251px;
     margin: auto;
     padding: 10px;
-    font-size: clamp(10px, 3vw, 20px);
+    font-size: clamp(12px, 3vw, 20px);
 
 
 }
@@ -17,7 +17,7 @@
     max-width: 128px;
     margin: auto;
     padding: 26px;
-    font-size: clamp(10px, 3vw, 20px);
+    /* font-size: clamp(10px, 3vw, 20px); */
     
 }
 
@@ -26,6 +26,7 @@
     border: 2px solid #E7E7E7;
     background: rgba(231, 231, 231, 0.40);
     box-shadow: 0px 4px 0px 0px #E7E7E7;
+    font-size: 16px;
 
 }
 
@@ -34,16 +35,17 @@
 
     .FilterButtonMenthe {
         display: flex;
+        border-radius: 25px;
         justify-content: center;
         padding: 13px;
     }
 
 }
 
-@media (max-width:384px) {
+@media (max-width:400px) {
 
     .FilterButtonMenthe {
-        border-radius: 25px;
+        border-radius: 20px;
         display: flex;
         justify-content: center;
         padding: 10px;
@@ -56,6 +58,7 @@
 @media (max-width:320px) {
 
     .FilterButtonMenthe {
+        border-radius: 20px;
         font-size: 10px;
         display: flex;
         justify-content: center;
