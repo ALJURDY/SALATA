@@ -1,33 +1,67 @@
-.FilterButtonTangerine{
+.FilterButtonTangerine {
     border-radius: 35px;
     border: 2px solid #F9B175;
     background: rgba(246, 157, 75, 0.36);
     max-width: 251px;
     margin: auto;
     padding: 10px;
+    font-size: clamp(10px, 3vw, 20px);
+
 
 }
 
-.FilterButtonMenthe{
+.FilterButtonMenthe {
     border-radius: 35px;
     border: 2px solid #A2DE96;
     background: rgba(162, 222, 150, 0.40);
     max-width: 128px;
     margin: auto;
     padding: 26px;
+    font-size: clamp(10px, 3vw, 20px);
+    
 }
 
-.FilterButtonFlex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.FilterButtonGrey{
+.FilterButtonGrey {
     border-radius: 35px;
     border: 2px solid #E7E7E7;
     background: rgba(231, 231, 231, 0.40);
     box-shadow: 0px 4px 0px 0px #E7E7E7;
-    
+
+}
+
+
+@media (max-width:500px) {
+
+    .FilterButtonMenthe {
+        display: flex;
+        justify-content: center;
+        padding: 13px;
+    }
+
+}
+
+@media (max-width:384px) {
+
+    .FilterButtonMenthe {
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+
+
+}
+
+@media (max-width:320px) {
+
+    .FilterButtonMenthe {
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        padding: 13px;
+    }
+
+
+
 }

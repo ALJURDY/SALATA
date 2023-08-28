@@ -60,7 +60,7 @@ const FilterBar: React.FC<FilterBarProps> = ({ setSelectedCategory, activeCatego
   return (
     <section className={style.FilterBarSection} id="Commande">
       <h2 className={style.FilterBarH2}>Quelles saveurs italiennes aujourd'hui ?</h2>
-      <div className={style.FilterBarFlex}>
+      <div className={style.FilterBarFlexCategory}>
         {CATEGORY.map((cat) => (
           <div className={style.FilterBarButtonCategory} key={cat.name}>
             <FilterButton
@@ -74,7 +74,7 @@ const FilterBar: React.FC<FilterBarProps> = ({ setSelectedCategory, activeCatego
           </div>
         ))}
       </div>
-      <div className={style.FilterBarFlex}>
+      <div className={style.FilterBarFlexDiet}>
         {dietTypes.map((diet, index) => (
           <div className={style.FilterBarButtonDiet} key={index}>
             <FilterButton
