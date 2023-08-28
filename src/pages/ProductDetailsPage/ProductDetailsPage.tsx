@@ -95,19 +95,20 @@ const ProductDetailsPage = () => {
             </div>
             <h3 className={Style.productdescription}>{product.description}</h3>
 
-            <div className={Style.ProductDetailDiet}></div>
-            {product.diet && product.diet.length > 0 && (
-              <div className={Style.productDiet}>
-                <ul className={Style.listStyle}>
-                  {product.diet.map((diet) => (
-                    <li key={diet}>{diet}</li>
-                  ))}
-                </ul>
-                
-              </div>
+            <div className={Style.ProductDetailDiet}>
+              {product.diet && product.diet.length > 0 && (
+                <div className={Style.productDiet}>
+                  <ul className={Style.listStyle}>
+                    {product.diet.map((diet) => (
+                      <li key={diet}>{diet}</li>
+                    ))}
+                  </ul>
 
+                </div>
 
-            )}
+              )}
+
+            </div>
 
             {/* Ingredient bar */}
             {product.extras && product.extras.length > 0 && (

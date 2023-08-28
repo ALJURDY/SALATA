@@ -44,10 +44,10 @@
 
 .arrowDown,
 .arrowUp {
-    
+
     width: 20px;
     height: 20px;
-    margin-left:35%;
+    margin-left: 35%;
 
 }
 
@@ -100,6 +100,29 @@
 .addToBasket:active {
     transform: translateY(2px);
 }
+
 strong {
     margin-bottom: 10px;
+}
+
+.listStyle {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-start ;
+    padding: 0;
+
+}
+
+.productDiet li {
+    border-radius: 35px;
+    border: 2px solid #A2DE96;
+    background: rgba(162, 222, 150, 0.40);
+    padding: 7px;
+    color: rgba(31, 27, 59, 0.80);
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(10px, 4vw, 12px);
+    font-weight: 700;
 }
