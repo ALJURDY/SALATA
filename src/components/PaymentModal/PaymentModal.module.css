@@ -1,0 +1,55 @@
+.modalSection {
+    background-color: var(--white);
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.modalTitle {
+    font-size: clamp(20px, 3vw, 25px);
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.paymentFormRow {
+    display: flex;
+}
+
+.paymentFormRow, .paymentFormColumn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.paymentFormRow:last-of-type {
+    flex-direction: row;
+    gap: 100px
+}
+
+.mandatoryField {
+    color: red;
+}
+
+/* INPUT & LABEL STYLE */
+.infoInput {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--grey);
+    border: none;
+    border-radius: 35px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.infoInput::placeholder {
+    color: dimgray;
+    font-weight: 300;
+}
+
+.modalLabel {
+    font-size: clamp(15px, 3vw, 17px);
+    margin-bottom: 10px;
+    margin-left: 20px;
+}

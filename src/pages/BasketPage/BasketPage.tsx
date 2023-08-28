@@ -9,7 +9,7 @@ const BasketPage = () => {
 
   const navigate = useNavigate();
   const backToHome = (): void => {
-    navigate("/");
+    navigate("/#Commande");
   };
 
   const goToPayment = (): void => {
