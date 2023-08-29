@@ -22,14 +22,13 @@ const FilterButton = (props: FilterButtonProps) => {
 
   // Utilisation d'une variable locale pour déterminer si le bouton est actif
   const isActive = props.isActive || (isDietButton && externalIsActive);
-  console.log("Log isActive",isActive); 
   
 
   // Utilisation du style approprié en fonction de la variable isActive
   const buttonStyle = isActive
     ? style.FilterButtonTangerine
     : style.FilterButtonGrey;
-    // console.log("ButtonStyle",buttonStyle);
+
     
         
         
