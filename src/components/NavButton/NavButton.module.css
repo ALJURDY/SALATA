@@ -18,7 +18,8 @@
 }
 
 .NavButtonSecondary {
-  width: 100%;
+  min-width: 200px;
+  width: 80%;
   border: 2px solid #f9b175;
   background: rgba(246, 157, 75, 0.36);
   box-shadow: 0px 4px 0px #f9b175;
