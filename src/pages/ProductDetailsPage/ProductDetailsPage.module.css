@@ -44,6 +44,10 @@
   font-family: "Quicksand", sans-serif;
 }
 
+.Ingredients:hover {
+  cursor: pointer;
+}
+
 .arrowDown,
 .arrowUp {
   width: 20px;
