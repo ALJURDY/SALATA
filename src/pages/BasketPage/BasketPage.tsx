@@ -29,10 +29,12 @@ const BasketPage = () => {
           {/* Liste de tous les produits du panier */}
           <section className={style.basketList}>
             {products.map((basketProduct) => (
+              <div key={basketProduct.id}>
               <ProductBasket
                 product={basketProduct.product}
                 quantity={basketProduct.quantity}
               />
+              </div>
             ))}
           </section>
 

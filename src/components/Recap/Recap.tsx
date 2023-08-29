@@ -14,10 +14,11 @@ const Recap = () => {
 
   const submit = (): void => {
     if (isFormValid() && formData.isPerCardPayment === "isPerCardPayment") {
-      setModalDisplay(true)
+      setModalDisplay(true);
+      navigate("/payment#paymentModal");
     }
     if (isFormValid() && formData.isPerCardPayment === "payLater") {
-      setModalDisplay(false)
+      setModalDisplay(false);
       navigate("/summary");
     }
   };
@@ -34,7 +35,7 @@ const Recap = () => {
       </p>
       <ul className={style.productListRecap}>
         {products.map((basketProduct) => (
-          <li>
+          <li key={basketProduct.id}>
             {basketProduct.product.name}
             {basketProduct.product.extras!.length > 0 && " ("}
             {basketProduct.product.extras?.map((extra, index) => (
@@ -55,11 +56,15 @@ const Recap = () => {
       </p>
       <hr className={style.horizontalBar} />
       <p className={style.prepaRecapInfo}>Temps de préparation : 20min</p>
-      <NavButton buttonText="Payer" navigate={submit} buttonType="secondary" />
+        <NavButton
+          buttonText="Payer"
+          navigate={submit}
+          buttonType="secondary"
+        />
 
       {/* Modale de paiement par carte */}
       {modalDisplay && (
-        <section className={style.modalDisplay}>
+        <section className={style.modalDisplay} id="paymentModal">
           <PaymentModal />
         </section>
       )}
