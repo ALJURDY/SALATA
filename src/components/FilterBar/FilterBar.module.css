@@ -1,43 +1,55 @@
-.FilterBarFlexCategory{
+.FilterBarFlexCategory {
     display: flex;
 
 }
 
 
-.FilterBarFlexDiet{
+.FilterBarFlexDiet {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.FilterBarButtonCategory{
+.FilterBarButtonCategory {
     padding: 10px;
 
 }
 
-.FilterBarButtonDiet{
+.FilterBarButtonDiet {
     padding: 10px;
 }
 
-.FilterBarH2{
+.FilterBarH2 {
     height: 150px;
     display: flex;
     align-items: flex-end;
 }
 
-.FilterBarSection{
+.FilterBarSection {
     margin-top: -220px;
     margin-bottom: 50px;
 }
 
-@media (max-width:542px){
-    .FilterBarH2{
+.FilterBarButtonRefresh {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border: 2px solid #E7E7E7;
+    background: rgba(231, 231, 231, 0.40);
+    padding: 7px;
+    margin: 5px;
+}
+
+
+
+@media (max-width:542px) {
+    .FilterBarH2 {
         height: 100px;
     }
 
-    .FilterBarButtonCategory{
+    .FilterBarButtonCategory {
         padding: 5px;
-    
+
     }
 }
