@@ -18,16 +18,17 @@ const SummaryPage = () => {
         <main>
             <h1 className={Style.title}>Merci d’avoir commandé !</h1>
             <section className={Style.container}>
-                <div className={Style.recap}>Récapitulatif
-                    <div className={Style.data}> {formData.email}</div>
-                    <div className={Style.data}>{formData.firstName} {formData.lastName}</div>
-                    <div className={Style.data}>Mode de paiement : {formData.isPerCardPayment ? "Par carte bancaire" : "Payer plus tard"}</div>
-                    <div className={Style.recap}> Numéro de table : {formData.tableNumber}</div>
+                <div className={Style.block}>
+                    <p className={Style.titres}>Récapitulatif</p>
+                    <p className={Style.data}> {formData.email}</p>
+                    <p className={Style.data}>{formData.firstName} {formData.lastName}</p>
+                    <p className={Style.data}>Mode de paiement : {formData.isPerCardPayment ? "Par carte bancaire" : "Payer plus tard"}</p>
+                    <p className={Style.titres}> Numéro de table : {formData.tableNumber}</p>
                 </div>
                 <div className={Style.line}></div>
-                <div className={Style.quantity}>
-                    Quantité : {getBasketQuantity()} produit
-                    {getBasketQuantity() > 1 && "s"}
+                <div className={Style.block}>
+                    <p className={Style.titres}>Quantité : {getBasketQuantity()} produit
+                    {getBasketQuantity() > 1 && "s"}</p>
                     {products.length > 0 && (
                         <div className={Style.selectedProducts}>
                             <ul>
@@ -39,7 +40,7 @@ const SummaryPage = () => {
                             </ul>
                         </div>
                     )}
-                    <div className={Style.quantity}>
+                    <div className={Style.titres}>
                         Total: {getBasketTotal().toFixed(2).replace(".", ",")} €
                     </div>
 

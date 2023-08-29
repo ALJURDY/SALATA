@@ -1,23 +1,23 @@
 .title {
-    display: flex;
-    justify-content: center;
-    font-family: 'Yeseva One', cursive;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Yeseva One', cursive;
 }
-
 .container {
     display: flex;
     align-items: flex-start;
   }
   
-  .recap,
-  .quantity {
+  .titres {
+    font-size: 18px;
+    font-family:'Yeseva One', cursive;
+  }
+  
+  .block {
     flex: 1;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
     padding: 20px;
-    font-family:'Yeseva One', cursive;
   }
 
   .selectedProducts ul {
@@ -35,9 +35,10 @@
   
   .line {
     width: 3px;
-    height: 200px;
     border-radius: 3vh;
+    align-self: stretch;
     background-color: #E7E7E7;
+    margin: 10px 0;
   }
 
   .button {
@@ -45,6 +46,26 @@
       justify-content: center;
   }
   
-  
+  /* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column; /* Change flex direction to stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .recap,
+  .quantity {
+    padding: 10px; /* Adjust padding for better spacing */
+  }
+
+  .line {
+    width: 40%;
+    height: 3px;
+    align-self: center;
+  }
+}
+
 
 
