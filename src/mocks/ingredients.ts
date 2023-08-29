@@ -79,55 +79,5 @@ export interface IIngredient {
       id: 15,
       name: "Saumon",
       price: 4.00
-    },
-    {
-      id: 16,
-      name: "Crevettes",
-      price: 3.00
-    },
-    {
-      id: 17,
-      name: "Câpres",
-      price: 0.50
-    },
-    {
-      id: 18,
-      name: "Anchois",
-      price: 1.50
-    },
-    {
-      id: 19,
-      name: "Thon",
-      price: 2.50
-    },
-    {
-      id: 20,
-      name: "Herbes de Provence",
-      price: 1.00
-    },
-    {
-      id: 21,
-      name: "Olives",
-      price: 0.75
-    },
-    {
-      id: 22,
-      name: "Poivrons",
-      price: 1.00
-    },
-    {
-      id: 23,
-      name: "Maïs",
-      price: 0.50
-    },
-    {
-      id: 24,
-      name: "Pomme de terre",
-      price: 1.50
-    },
-    {
-      id: 25,
-      name: "Oignons",
-      price: 0.75
-    },
+    }
   ]

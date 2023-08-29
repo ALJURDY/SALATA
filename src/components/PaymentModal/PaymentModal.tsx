@@ -68,7 +68,7 @@ const PaymentModal = () => {
         </div>
       </form>
 
-      <NavButton navigate={goToSummary} buttonText={buttonText} />
+      <NavButton navigate={goToSummary} buttonText={buttonText} buttonType="secondary" />
     </section>
   );
 };

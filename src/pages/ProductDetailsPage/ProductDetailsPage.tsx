@@ -93,7 +93,7 @@ const ProductDetailsPage = () => {
             <h2 className={Style.productName}>{product.name}</h2>
             <h2 className={Style.productPrice}>{productPrice}</h2>
           </div>
-          <h3 className={Style.productdescription}>{product.description}</h3>
+          <p className={Style.productdescription}>{product.description}</p>
 
           <div className={Style.ProductDetailDiet}>
             {product.diet && product.diet.length > 0 && (
@@ -129,7 +129,7 @@ const ProductDetailsPage = () => {
               {isIngredientListOpen && (
                 <ul>
                   {INGREDIENTS.map((ingredient) => (
-                    <li key={ingredient.id}>
+                    <li className={Style.extraIngredients} key={ingredient.id}>
                       <label>
                         <input
                           type="checkbox"

@@ -70,7 +70,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/caprese.jpg",
       alt: "Salade Caprese",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 2,
@@ -83,7 +83,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/sicilienne.jpg",
       alt: "Salade Sicilienneing",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 3,
@@ -96,7 +96,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/romaine.jpeg",
       alt: "Salade Romaine",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 4,
@@ -109,7 +109,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/mediterraneo.jpg",
       alt: "Salade Mediterraneo",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 5,
@@ -122,7 +122,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/palermo.jpg",
       alt: "Salade Palermo",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 6,
@@ -135,7 +135,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/toscane.jpg",
       alt: "Salade Toscane",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 7,
@@ -148,7 +148,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/florenze.jpeg",
       alt: "Salade Florenze",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 8,
@@ -161,7 +161,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/cremonaise.jpg",
       alt: "Salade Crémonaise",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 9,
@@ -174,7 +174,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/ferrareze.jpg",
       alt: "Salade Ferrareze",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 10,
@@ -187,7 +187,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/milanaise.jpg",
       alt: "Salade Milanaise",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 11,
@@ -200,7 +200,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/pise.jpg",
       alt: "Salade de Pise",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 12,
@@ -213,7 +213,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/ravenne.jpg",
       alt: "Salade Ravenne",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
 
   {
@@ -227,7 +227,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/siennaise.jpg",
       alt: "Salade Siennaise",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 14,
@@ -240,7 +240,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/trevise.jpg",
       alt: "Salade Trévise",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 15,
@@ -253,7 +253,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/cesar.jpg",
       alt: "Salade César",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 16,
@@ -266,7 +266,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/veronaise.jpg",
       alt: "Salade Veronaise",
     },
-    extras: INGREDIENTS.slice(0, 25),
+    extras: INGREDIENTS,
   },
   {
     id: 17,

@@ -1,150 +1,131 @@
 .productContent {
-    display: flex;
-    align-items: flex-start;
-    gap: 80px;
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.productName, .productPrice {
+    margin: 0;
 }
 
 .productImage {
-    width: 40%;
-    border-radius: 10vh;
-    margin-top: 30px;
+  width: 40%;
+  border-radius: 35px;
+  margin-top: 30px;
 }
 
 .detailsContainer {
-    flex: 1;
-    padding: 0 20px;
+  flex: 1;
+  padding: 0 20px;
 }
 
 .productHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ingredientBar {
-    display: inline-grid;
-    width: 100%;  
+  display: inline-grid;
+  width: 100%;
 }
 
 .Ingredients {
-    width: 100%;
-    border: none;
-    border-radius: 22px;
-    text-decoration: none;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Quicksand', sans-serif;
+  width: 100%;
+  border: none;
+  border-radius: 22px;
+  text-decoration: none;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Quicksand", sans-serif;
 }
 
 .arrowDown,
 .arrowUp {
-
-    width: 20px;
-    height: 20px;
-    margin-left: 35%;
-
+  width: 20px;
+  height: 20px;
 }
 
 .retirer {
-    margin-left: 5px;
-    text-decoration: underline;
-    cursor: pointer;
+  margin-left: 5px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .actionsContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .quantityPicker {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .subActions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-
-.addToBasket {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    border-radius: 22px;
-    border-color: var(--orange);
-    border-bottom-width: 5px;
-    background: var(--orange);
-    text-decoration: none;
-    color: var(--black);
-    padding: 12px 25px;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 700;
-}
-
-.addToBasket:focus {
-    outline: none;
-}
-
-.addToBasket:active {
-    transform: translateY(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .ingredientBar strong {
-    margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .listStyle {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: flex-start ;
-    padding: 0;
-
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 0;
 }
 
 .productDiet li {
-    border-radius: 35px;
-    border: 2px solid #A2DE96;
-    background: rgba(162, 222, 150, 0.40);
-    padding: 7px;
-    color: rgba(31, 27, 59, 0.80);
-    text-align: center;
-    font-family: 'Quicksand', sans-serif;
-    font-size: clamp(10px, 4vw, 12px);
-    font-weight: 700;
+  border-radius: 35px;
+  border: 2px solid #a2de96;
+  background: rgba(162, 222, 150, 0.4);
+  padding: 7px;
+  color: rgba(31, 27, 59, 0.8);
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(10px, 4vw, 12px);
+  font-weight: 700;
+}
+
+.extraIngredients {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.extraIngredients input {
+  margin-right: 10px;
 }
 
 /* Media queries for responsiveness */
 
 @media (max-width: 768px) {
-    
-    .productContent {
-        flex-direction: column; /* Stack items vertically */
-        gap: 20px; 
-    }
-    
-    .productImage {
-        width: 100%;
-    }
-    
-    .detailsContainer {
-        padding: 0; 
-        width: 100%;
-    }
+  .productContent {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
+  }
 
-    .actionsContainer {
-        display: block;
-    }
-    .quantityPicker {
-        text-align: center;
-        padding: 10px;
-    }
-    
+  .productImage {
+    width: 100%;
+  }
+
+  .detailsContainer {
+    padding: 0;
+    width: 100%;
+  }
+
+  .actionsContainer {
+    display: block;
+  }
+  .quantityPicker {
+    text-align: center;
+    padding: 10px;
+  }
 }
