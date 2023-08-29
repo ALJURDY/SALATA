@@ -51,13 +51,8 @@
 @media (max-width: 768px) {
   .container {
     display: flex;
-    flex-direction: column; /* Change flex direction to stack elements vertically */
-    align-items: center; /* Center items horizontally */
-  }
-
-  .recap,
-  .quantity {
-    padding: 10px; /* Adjust padding for better spacing */
+    flex-direction: column;
+    align-items: center;
   }
 
   .line {
