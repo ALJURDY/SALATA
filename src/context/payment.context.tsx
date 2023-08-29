@@ -5,7 +5,6 @@ interface ValidationErrors {
   firstName: string;
   lastName: string;
   phoneNumber: string;
-  tableNumber: string;
 }
 
 interface PaymentForm {
@@ -21,7 +20,7 @@ export interface FormData {
   lastName: string;
   phoneNumber: string;
   tableNumber: number;
-  isPerCardPayment: boolean;
+  isPerCardPayment: string;
 }
 
 const emptyformData: FormData = {
@@ -30,22 +29,21 @@ const emptyformData: FormData = {
   lastName: "",
   phoneNumber: "",
   tableNumber: 0,
-  isPerCardPayment: true,
+  isPerCardPayment: "isPerCardPayment",
 };
 
 const emptyValidationErrors: ValidationErrors = {
   email: "",
   firstName: "",
   lastName: "",
-  phoneNumber: "",
-  tableNumber: "",
+  phoneNumber: ""
 };
 
 const emptyPaymentForm: PaymentForm = {
   formData: emptyformData,
   handleChange: () => {},
   errors: emptyValidationErrors,
-  isFormValid: () => false
+  isFormValid: () => false,
 };
 
 const PaymentContext = createContext<PaymentForm>(emptyPaymentForm);
@@ -65,10 +63,9 @@ const PaymentProvider = (props: PaymentProviderProps) => {
   const [errors, setErrors] = useState(emptyValidationErrors);
 
   const handleChange = (e: any) => {
-    const { name, value, id } = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      isPerCardPayment: id === 'isPerCardPayment',
       [name]: value,
     });
   };
@@ -78,8 +75,7 @@ const PaymentProvider = (props: PaymentProviderProps) => {
       email: "",
       firstName: "",
       lastName: "",
-      phoneNumber: "",
-      tableNumber: "",
+      phoneNumber: ""
     };
 
     !formData.email
@@ -95,15 +91,6 @@ const PaymentProvider = (props: PaymentProviderProps) => {
       ? (newErrors.phoneNumber = "Le numéro de téléphone est obligatoire")
       : (newErrors.phoneNumber = "");
 
-    if (!formData.tableNumber) {
-      newErrors.tableNumber = "Le numéro de table est obligatoire";
-    } else if (formData.tableNumber < 1 || formData.tableNumber > 20) {
-      newErrors.tableNumber =
-        "Le numéro de table doit être compris entre 1 et 20";
-    } else {
-      newErrors.tableNumber = "";
-    }
-
     // Mettre à jour le hook des erreurs
     setErrors(newErrors);
 
@@ -112,8 +99,7 @@ const PaymentProvider = (props: PaymentProviderProps) => {
       newErrors.email === "" &&
       newErrors.firstName === "" &&
       newErrors.lastName === "" &&
-      newErrors.phoneNumber === "" &&
-      newErrors.tableNumber === ""
+      newErrors.phoneNumber === ""
     );
   };
 
