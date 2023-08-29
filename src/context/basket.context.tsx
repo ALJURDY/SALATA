@@ -52,16 +52,15 @@ const BasketProvider = (props: BasketProviderProps) => {
     };
 
     const foundProduct = basketProducts.find(
-      (p) => p.product === newBasketProduct.product
+      (basketItems) => basketItems.product.name === newBasketProduct.product.name
     );
 
     if (!foundProduct) {
       setBasketProducts([...basketProducts, newBasketProduct]);
     } else {
-      foundProduct.quantity += 1;
+      foundProduct.quantity += 1;      
       setBasketProducts([...basketProducts]);
     }
-    console.log(basketProducts);
   };
 
   // Quantité de produits dans le panier

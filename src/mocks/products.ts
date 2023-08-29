@@ -16,13 +16,13 @@ export interface IProductImage {
   alt: string;
 }
 
-export interface ICategory{
+export interface ICategory {
   name: string;
   icone: string;
 }
 
-export type ProductCategoryType = "salades" | "boissons" | "desserts" ;
- 
+export type ProductCategoryType = "salades" | "boissons" | "desserts";
+
 export type DietType =
   | "végan"
   | "végétarien"
@@ -70,7 +70,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/caprese.jpg",
       alt: "Salade Caprese",
     },
-    extras:  INGREDIENTS.slice(0,25), 
+    extras: INGREDIENTS.slice(0, 25),
   },
   {
     id: 2,
@@ -83,7 +83,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/sicilienne.jpg",
       alt: "Salade Sicilienneing",
     },
-    extras:  INGREDIENTS.slice(0,25),
+    extras: INGREDIENTS.slice(0, 25),
   },
   {
     id: 3,
@@ -96,7 +96,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/romaine.jpeg",
       alt: "Salade Romaine",
     },
-    extras: INGREDIENTS.slice(0,25),
+    extras: INGREDIENTS.slice(0, 25),
   },
   {
     id: 4,
@@ -109,7 +109,7 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/mediterraneo.jpg",
       alt: "Salade Mediterraneo",
     },
-    extras: INGREDIENTS.slice(0,25),
+    extras: INGREDIENTS.slice(0, 25),
   },
   {
     id: 5,
@@ -122,20 +122,20 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/palermo.jpg",
       alt: "Salade Palermo",
     },
-    extras: INGREDIENTS.slice(0,25),
+    extras: INGREDIENTS.slice(0, 25),
   },
   {
     id: 6,
     name: "Salade Toscane",
     price: 13,
     description: "Concombres, farfalles, tomates, oignons, basilic",
-    diet: ["sans porc", "végétarien", "végan","pâtes"],
+    diet: ["sans porc", "végétarien", "végan", "pâtes"],
     category: "salades",
     img: {
       src: "/assets/salades/toscane.jpg",
       alt: "Salade Toscane",
     },
-    extras: INGREDIENTS.slice(0,25),
+    extras: INGREDIENTS.slice(0, 25),
   },
   {
     id: 7,
@@ -148,10 +148,128 @@ export const PRODUCTS: IProduct[] = [
       src: "/assets/salades/florenze.jpeg",
       alt: "Salade Florenze",
     },
-    extras: INGREDIENTS.slice(0,25),
+    extras: INGREDIENTS.slice(0, 25),
   },
   {
     id: 8,
+    name: "Salade Crémonaise",
+    price: 11,
+    description: "Tartine, pignons, avocat, oeuf, huile d'olive",
+    diet: ["sans porc", "végétarien"],
+    category: "salades",
+    img: {
+      src: "/assets/salades/cremonaise.jpg",
+      alt: "Salade Crémonaise",
+    },
+    extras: INGREDIENTS.slice(0, 25),
+  },
+  {
+    id: 9,
+    name: "Salade Ferrareze",
+    price: 13,
+    description: "Féta, frisée, tomates cerise, ananas, olive noires, huile d'olive",
+    diet: ["sans porc", "végétarien", "sans gluten"],
+    category: "salades",
+    img: {
+      src: "/assets/salades/ferrareze.jpg",
+      alt: "Salade Ferrareze",
+    },
+    extras: INGREDIENTS.slice(0, 25),
+  },
+  {
+    id: 10,
+    name: "Salade Milanaise",
+    price: 12,
+    description: "Concombre, carottes, tomates, quinoa, brocolis, poivron, fenouil",
+    diet: ["sans gluten", "sans porc", "végétarien", "végan"],
+    category: "salades",
+    img: {
+      src: "/assets/salades/milanaise.jpg",
+      alt: "Salade Milanaise",
+    },
+    extras: INGREDIENTS.slice(0, 25),
+  },
+  {
+    id: 11,
+    name: "Salade de Pise",
+    price: 12,
+    description: "Vermicelles de riz, crevette, poivron, graines de sésame",
+    diet: ["sans porc", "végétarien", "produits de la mer"],
+    category: "salades",
+    img: {
+      src: "/assets/salades/pise.jpg",
+      alt: "Salade de Pise",
+    },
+    extras: INGREDIENTS.slice(0, 25),
+  },
+  {
+    id: 12,
+    name: "Salade Ravenne",
+    price: 13,
+    description: "Mâche, avocat, olive noire, mozzarella, tomate",
+    diet: ["sans porc", "végétarien"],
+    category: "salades",
+    img: {
+      src: "/assets/salades/ravenne.jpg",
+      alt: "Salade Ravenne",
+    },
+    extras: INGREDIENTS.slice(0, 25),
+  },
+
+  {
+    id: 13,
+    name: "Salade Siennaise",
+    price: 11,
+    description: "Mâche, fraise, zest de citron, concombre, tomate cerise, noix de cajou",
+    diet: ["sans gluten"],
+    category: "salades",
+    img: {
+      src: "/assets/salades/siennaise.jpg",
+      alt: "Salade Siennaise",
+    },
+    extras: INGREDIENTS.slice(0, 25),
+  },
+  {
+    id: 14,
+    name: "Salade Trévise",
+    price: 13,
+    description: "Burrata, tomate, pesto, roquette",
+    diet: ["sans porc", "végétarien"],
+    category: "salades",
+    img: {
+      src: "/assets/salades/trevise.jpg",
+      alt: "Salade Trévise",
+    },
+    extras: INGREDIENTS.slice(0, 25),
+  },
+  {
+    id: 15,
+    name: "Salade César",
+    price: 11,
+    description: "Poulet, parmesan, crouton, frisée, sauce césar",
+    diet: ["sans porc"],
+    category: "salades",
+    img: {
+      src: "/assets/salades/cesar.jpg",
+      alt: "Salade César",
+    },
+    extras: INGREDIENTS.slice(0, 25),
+  },
+  {
+    id: 16,
+    name: "Salade Veronaise",
+    price: 12,
+    description: "Tomates, mozza, basilic, asperges, jambon cru",
+    diet: ["sans gluten"],
+    category: "salades",
+    img: {
+      src: "/assets/salades/veronaise.jpg",
+      alt: "Salade Veronaise",
+    },
+    extras: INGREDIENTS.slice(0, 25),
+  },
+  {
+    id: 17,
     name: "Tiramisù",
     price: 9,
     description: "Mascarpone, café, cacao, génoise, sucre",
@@ -163,7 +281,7 @@ export const PRODUCTS: IProduct[] = [
     },
   },
   {
-    id: 9,
+    id: 18,
     name: "Panna Cotta",
     price: 9,
     description: "Crème, lait, sucre, fruits rouges",
@@ -175,7 +293,71 @@ export const PRODUCTS: IProduct[] = [
     },
   },
   {
-    id: 10,
+    id: 19,
+    name: "Cannoli à l'orange",
+    price: 9,
+    description: "Ricotta, orange, sucre, fruit confit",
+    diet: ["sans porc", "végétarien"],
+    category: "desserts",
+    img: {
+      src: "/assets/desserts/cannoli.jpg",
+      alt: "Cannoli à l'orange",
+    },
+  },
+
+  {
+    id: 20,
+    name: "Cassata à l'italienne",
+    price: 9,
+    description: "Oeuf, mascarpone, sucre, fruit confit",
+    diet: ["sans gluten", "sans porc", "végétarien"],
+    category: "desserts",
+    img: {
+      src: "/assets/desserts/cassata.jpg",
+      alt: "Panna Cotta",
+    },
+  },
+  {
+    id: 21,
+    name: "Panettone",
+    price: 9,
+    description: "Crème, lait, sucre, fruits rouges",
+    diet: ["sans porc", "végétarien"],
+    category: "desserts",
+    img: {
+      src: "/assets/desserts/panettone.jpg",
+      alt: "Panettone",
+    },
+  },
+
+  {
+    id: 22,
+    name: "Crème dessert au café",
+    price: 9,
+    description: "Maïzena, oeuf, lait, sucre, café espresso",
+    diet: ["sans porc", "végétarien"],
+    category: "desserts",
+    img: {
+      src: "/assets/desserts/creme-dessert.jpg",
+      alt: "Crème dessert au café",
+    },
+  },
+
+  {
+    id: 23,
+    name: "Glace à l’italienne",
+    price: 9,
+    description: "Mascarpone, lait, sucre, vanille, oeuf",
+    diet: ["sans porc", "végétarien"],
+    category: "desserts",
+    img: {
+      src: "/assets/desserts/glace-italienne.jpg",
+      alt: "Glace à l’italienne",
+    },
+  },
+
+  {
+    id: 24,
     name: "Citronnade maison",
     price: 3,
     description: "Citrons frais, limonade bio",
@@ -187,7 +369,7 @@ export const PRODUCTS: IProduct[] = [
     },
   },
   {
-    id: 11,
+    id: 25,
     name: "Coca cola",
     price: 2.5,
     description: "Canette 33cl, original ou zero",
@@ -196,6 +378,84 @@ export const PRODUCTS: IProduct[] = [
     img: {
       src: "/assets/boissons/coca.jpg",
       alt: "Coca cola",
+    },
+  },
+
+  {
+    id: 26,
+    name: "Evian",
+    price: 2,
+    description: "Evian 33cl",
+    diet: [],
+    category: "boissons",
+    img: {
+      src: "/assets/boissons/evian.jpg",
+      alt: "Evian",
+    },
+  },
+
+  {
+    id: 27,
+    name: "Jus de Légumes",
+    price: 3.5,
+    description: "Fraichement pressé",
+    diet: [],
+    category: "boissons",
+    img: {
+      src: "/assets/boissons/legumes.jpg",
+      alt: "Jus de Légumes",
+    },
+  },
+
+  {
+    id: 28,
+    name: "Limonade Citron",
+    price: 2,
+    description: "Bouteille 25cl, Fait maison",
+    diet: [],
+    category: "boissons",
+    img: {
+      src: "/assets/boissons/limonade-citron.jpg",
+      alt: "Limonade Citron",
+    },
+  },
+
+  {
+    id: 29,
+    name: "Limonade Fraise",
+    price: 2,
+    description: "Bouteille 25cl, Faite maison",
+    diet: [],
+    category: "boissons",
+    img: {
+      src: "/assets/boissons/limonade-fraise.jpg",
+      alt: "Limonade Fraise",
+    },
+  },
+
+  {
+    id: 30,
+    name: "Orangina",
+    price: 2,
+    description: "Bouteille 25cl",
+    diet: [],
+    category: "boissons",
+    img: {
+      src: "/assets/boissons/orangina.jpg",
+      alt: "Orangina",
+    },
+  },
+
+  {
+    id: 21,
+    name: "San Pellegrino",
+    price: 2.5,
+    description: "San Pellegrino 50cl",
+    diet: [],
+    category: "boissons",
+    img: {
+      src: "/assets/boissons/san-pellegrino.jpg",
+      alt: "San Pellegrino",
     },
   },
 ];

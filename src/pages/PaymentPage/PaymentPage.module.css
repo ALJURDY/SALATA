@@ -20,7 +20,7 @@
   text-align: right;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 910px) {
   .paymentPageContainer {
     flex-direction: column;
     gap: 30px;

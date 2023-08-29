@@ -25,6 +25,11 @@
   margin-bottom: 10px;
 }
 
+.navButtonRecap {
+  display: flex;
+  justify-content: flex;
+}
+
 /* MODALE */
 .modalDisplay {
   position: absolute;
@@ -38,9 +43,10 @@
   justify-content: center;
   align-items: center;
   text-align: left;
+  padding-bottom: 1000px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
   .horizontalBar {
     width: 100%;
