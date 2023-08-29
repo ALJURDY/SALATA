@@ -64,7 +64,7 @@ export const PRODUCTS: IProduct[] = [
     name: "Salade Caprese",
     price: 11,
     description: "Tomates, mozza, basilic, asperges, jambon cru",
-    diet: ["sans gluten"],
+    diet: ["sans gluten",],
     category: "salades",
     img: {
       src: "/assets/salades/caprese.jpg",
@@ -81,7 +81,7 @@ export const PRODUCTS: IProduct[] = [
     category: "salades",
     img: {
       src: "/assets/salades/sicilienne.jpg",
-      alt: "Salade Sicilienneing",
+      alt: "Salade Sicilienne",
     },
     extras: INGREDIENTS,
   },
@@ -90,7 +90,7 @@ export const PRODUCTS: IProduct[] = [
     name: "Salade Romaine",
     price: 11,
     description: "Thon, olives, oeufs, dés de fêta, batavia",
-    diet: ["sans porc", "végétarien", "végan", "sans gluten", "produits de la mer"],
+    diet: ["sans porc","sans gluten", "produits de la mer"],
     category: "salades",
     img: {
       src: "/assets/salades/romaine.jpeg",
@@ -103,7 +103,7 @@ export const PRODUCTS: IProduct[] = [
     name: "Salade Mediterraneo",
     price: 15,
     description: "Pouple, oignons rouges, pomme de terre",
-    diet: ["sans gluten", "produits de la mer"],
+    diet: ["sans gluten", "produits de la mer", "sans porc"],
     category: "salades",
     img: {
       src: "/assets/salades/mediterraneo.jpg",
@@ -194,7 +194,7 @@ export const PRODUCTS: IProduct[] = [
     name: "Salade de Pise",
     price: 12,
     description: "Vermicelles de riz, crevette, poivron, graines de sésame",
-    diet: ["sans porc", "végétarien", "produits de la mer"],
+    diet: ["sans porc", "produits de la mer", "sans gluten" ],
     category: "salades",
     img: {
       src: "/assets/salades/pise.jpg",
@@ -206,7 +206,7 @@ export const PRODUCTS: IProduct[] = [
     id: 12,
     name: "Salade Ravenne",
     price: 13,
-    description: "Mâche, avocat, olive noire, mozzarella, tomate",
+    description: "Mâche, avocat, olive noire, mozzarella, tomate, pain grillé",
     diet: ["sans porc", "végétarien"],
     category: "salades",
     img: {
@@ -221,7 +221,7 @@ export const PRODUCTS: IProduct[] = [
     name: "Salade Siennaise",
     price: 11,
     description: "Mâche, fraise, zest de citron, concombre, tomate cerise, noix de cajou",
-    diet: ["sans gluten"],
+    diet: ["sans gluten", "végan", "végétarien", "sans porc"],
     category: "salades",
     img: {
       src: "/assets/salades/siennaise.jpg",
