@@ -1,17 +1,13 @@
-.productDetails {
-    display: flex;
-    gap: 80px;
-}
-
 .productContent {
     display: flex;
     align-items: flex-start;
+    gap: 80px;
 }
 
 .productImage {
-    width: 33%;
+    width: 40%;
     border-radius: 10vh;
-    padding: 30px;
+    margin-top: 30px;
 }
 
 .detailsContainer {
@@ -27,18 +23,17 @@
 
 .ingredientBar {
     display: inline-grid;
-    width: 100%;
-    padding: 20px;
+    width: 100%;  
 }
 
 .Ingredients {
-    width: 90%;
+    width: 100%;
     border: none;
     border-radius: 22px;
     text-decoration: none;
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -65,7 +60,6 @@
 }
 
 .quantityPicker {
-    margin-left: 40%;
     margin-top: 20px;
 }
 
@@ -101,7 +95,7 @@
     transform: translateY(2px);
 }
 
-strong {
+.ingredientBar strong {
     margin-bottom: 10px;
 }
 
@@ -127,3 +121,30 @@ strong {
     font-weight: 700;
 }
 
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    
+    .productContent {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; 
+    }
+    
+    .productImage {
+        width: 100%;
+    }
+    
+    .detailsContainer {
+        padding: 0; 
+        width: 100%;
+    }
+
+    .actionsContainer {
+        display: block;
+    }
+    .quantityPicker {
+        text-align: center;
+        padding: 10px;
+    }
+    
+}
