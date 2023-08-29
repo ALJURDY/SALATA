@@ -37,10 +37,14 @@
     border-radius: 20px;
     border: 2px solid #E7E7E7;
     background: rgba(231, 231, 231, 0.40);
+    box-shadow: 0px 4px 0px 0px #e7e7e7;
     padding: 7px;
     margin: 5px;
 }
 
+.FilterBarButtonRefresh:hover {
+    cursor: pointer;
+}
 
 
 @media (max-width:542px) {
