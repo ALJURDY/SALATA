@@ -49,7 +49,7 @@ const BasketPage = () => {
             </p>
             <hr />
             <p className={style.prepa}>Temps de préparation : 20min</p>
-            <NavButton buttonText="Commander" navigate={goToPayment} />
+            <NavButton buttonText="Commander" navigate={goToPayment} buttonType="secondary" />
           </section>
         </section>
       )}

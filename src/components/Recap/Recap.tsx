@@ -55,7 +55,7 @@ const Recap = () => {
       </p>
       <hr className={style.horizontalBar} />
       <p className={style.prepaRecapInfo}>Temps de préparation : 20min</p>
-      <NavButton buttonText="Payer" navigate={submit} />
+      <NavButton buttonText="Payer" navigate={submit} buttonType="secondary" />
 
       {/* Modale de paiement par carte */}
       {modalDisplay && (
