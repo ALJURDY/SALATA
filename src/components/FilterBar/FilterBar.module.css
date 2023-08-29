@@ -34,12 +34,21 @@
 .FilterBarButtonRefresh {
     display: flex;
     justify-content: center;
-    border-radius: 20px;
+    align-items: center;
+    border-radius: 14px;
     border: 2px solid #E7E7E7;
     background: rgba(231, 231, 231, 0.40);
     box-shadow: 0px 4px 0px 0px #e7e7e7;
     padding: 7px;
-    margin: 5px;
+    margin-top: 12px;
+}
+
+.svgOn{
+    fill: var(--orange);
+}
+
+.svgOff path{
+    fill: var(--black);
 }
 
 .FilterBarButtonRefresh:hover {
@@ -55,5 +64,10 @@
     .FilterBarButtonCategory {
         padding: 5px;
 
+    }
+
+    .FilterBarButtonRefresh{
+        padding: 5px;
+        border-radius: 13px;
     }
 }
