@@ -2,7 +2,14 @@ import { IProduct, PRODUCTS, ProductCategoryType, DietType } from "../../mocks/p
 import ProductCard from "../ProductCard/ProductCard";
 import style from "./ProductList.module.css";
 
-const ProductList = ({ selectedCategory, selectedDiet }: { selectedCategory: string | null, selectedDiet: DietType | null }) => {
+interface ProductListProps {
+  selectedCategory: string;
+  selectedDiets: DietType[];
+}
+
+const ProductList = (props: ProductListProps) => {
+  const { selectedCategory, selectedDiets } = props;
+
   // Créer un objet pour regrouper les produits par catégorie
   const productsByCategory: Record<ProductCategoryType, IProduct[]> = {
     salades: [],
@@ -17,13 +24,24 @@ const ProductList = ({ selectedCategory, selectedDiet }: { selectedCategory: str
     }
   });
 
+  const areDietsListsEquals = (
+    dietList1: DietType[],
+    dietList2: DietType[]
+  ): boolean => {
+    return dietList1.every(diet => dietList2.includes(diet))
+  };
+
   return (
     <>
       {/* Afficher les produits groupés par catégorie */}
       {Object.entries(productsByCategory).map(([category, products]) => {
-        const filteredProducts = products.filter(product => {
-          return (selectedCategory === null || selectedCategory === category) &&
-                 (selectedDiet === null || product.diet.includes(selectedDiet));
+        const filteredProducts = products.filter((product) => {
+
+          return (
+            (selectedCategory === "tout" || selectedCategory === category) &&
+            (selectedDiets.length === 0 ||
+              areDietsListsEquals(selectedDiets, product.diet))
+          );
         });
 
         if (filteredProducts.length > 0) {
@@ -41,7 +59,7 @@ const ProductList = ({ selectedCategory, selectedDiet }: { selectedCategory: str
           );
         }
 
-        return null; // Pas de produits à afficher pour cette catégorie
+        return []; // Pas de produits à afficher pour cette catégorie et filtres de régime
       })}
     </>
   );
