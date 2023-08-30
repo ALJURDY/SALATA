@@ -121,6 +121,7 @@
 
   .productImage {
     width: 100%;
+    margin-top: 20px;
   }
 
   .detailsContainer {
@@ -134,5 +135,13 @@
   .quantityPicker {
     text-align: center;
     padding: 10px;
+  }
+
+  .listStyle {
+    gap: 5px;
+  }
+
+  .subActions {
+    margin: 0;
   }
 }

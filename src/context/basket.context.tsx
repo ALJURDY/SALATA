@@ -24,12 +24,12 @@ interface IBasket {
 // un panier par defaut pour éviter qu'il puisse être null
 const defaultBasket: IBasket = {
   products: [],
-  addProductToBasket: () => { },
+  addProductToBasket: () => {},
   getBasketQuantity: () => 0,
   getBasketTotal: () => 0,
-  deleteBasketProduct: () => { },
-  deleteOneProduct: () => { },
-  clearBasket: () => { }
+  deleteBasketProduct: () => {},
+  deleteOneProduct: () => {},
+  clearBasket: () => {},
 };
 
 const BasketContext = createContext<IBasket>(defaultBasket);
@@ -52,13 +52,15 @@ const BasketProvider = (props: BasketProviderProps) => {
     };
 
     const foundProduct = basketProducts.find(
-      (basketItems) => basketItems.product.name === newBasketProduct.product.name
+      (basketItems) =>
+        basketItems.product.name === newBasketProduct.product.name &&
+        basketItems.product.extras?.length === newBasketProduct.product.extras?.length
     );
 
     if (!foundProduct) {
       setBasketProducts([...basketProducts, newBasketProduct]);
     } else {
-      foundProduct.quantity += 1;      
+      foundProduct.quantity += 1;
       setBasketProducts([...basketProducts]);
     }
   };
@@ -79,7 +81,7 @@ const BasketProvider = (props: BasketProviderProps) => {
         accumulator +
         (currentValue.product.price +
           getExtraTotal(currentValue.product.extras)) *
-        currentValue.quantity,
+          currentValue.quantity,
       0
     );
   };
