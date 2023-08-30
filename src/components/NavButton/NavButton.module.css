@@ -24,3 +24,12 @@
   background: rgba(246, 157, 75, 0.36);
   box-shadow: 0px 4px 0px #f9b175;
 }
+
+@media (max-width: 400px) {
+  .NavButton {
+    padding: 7px 20px;
+  }
+  .NavButtonSecondary {
+    padding: 12px 25px;
+  }
+}

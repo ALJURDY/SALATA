@@ -50,11 +50,12 @@ h2 {
 @media (max-width: 800px) {
   main {
     margin: 0 20px;
+    padding-top: 100px;
   }
 }
 
 @media (max-width: 320px) {
   main {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 }

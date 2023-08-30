@@ -63,6 +63,11 @@
   .basketCard {
     gap: 10px;
   }
+
+  .basketCard .price {
+    white-space: nowrap;
+  }
+
   .basketCard .extras {
     width: 60%;
   }
@@ -70,9 +75,10 @@
 
 @media (max-width: 320px) {
   .basketCard {
-    padding-right: 5px;
+    gap: 3px;
   }
-  .basketCard .price {
-    white-space: nowrap;
+
+  .basketCard .productName {
+    max-width: 28px;
   }
 }

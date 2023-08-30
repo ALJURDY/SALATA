@@ -47,3 +47,12 @@
   cursor: auto;
   transform: none;
 }
+
+@media (max-width: 320px) {
+  .QuantityPicker {
+    padding: 5px;
+  }
+  .Quantity {
+    margin: 2px;
+  }
+}
