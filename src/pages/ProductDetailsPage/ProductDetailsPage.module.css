@@ -1,0 +1,147 @@
+.productContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.productName,
+.productPrice {
+  margin: 0;
+}
+
+.productImage {
+  width: 40%;
+  border-radius: 35px;
+  margin-top: 30px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.detailsContainer {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.productHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingredientBar {
+  display: inline-grid;
+  width: 100%;
+}
+
+.Ingredients {
+  width: 100%;
+  border: none;
+  border-radius: 22px;
+  text-decoration: none;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Quicksand", sans-serif;
+}
+
+.Ingredients:hover {
+  cursor: pointer;
+}
+
+.arrowDown,
+.arrowUp {
+  width: 20px;
+  height: 20px;
+}
+
+.retirer {
+  margin-left: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.actionsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantityPicker {
+  margin-top: 20px;
+}
+
+.subActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ingredientBar strong {
+  margin: 10px 0;
+}
+
+.listStyle {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.productDiet li {
+  border-radius: 35px;
+  border: 2px solid #a2de96;
+  background: rgba(162, 222, 150, 0.4);
+  padding: 7px;
+  color: rgba(31, 27, 59, 0.8);
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(10px, 4vw, 12px);
+  font-weight: 700;
+}
+
+.extraIngredients {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.extraIngredients input {
+  margin-right: 10px;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  .productContent {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
+  }
+
+  .productImage {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .detailsContainer {
+    padding: 0;
+    width: 100%;
+  }
+
+  .actionsContainer {
+    display: block;
+  }
+  .quantityPicker {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .listStyle {
+    gap: 5px;
+  }
+
+  .subActions {
+    margin: 0;
+  }
+}

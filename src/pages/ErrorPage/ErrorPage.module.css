@@ -1,0 +1,71 @@
+.ErrorPageFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ErrorPageSection{
+    display: flex;
+}
+
+.ErrorPageImgVespa {
+    width: 30%;
+    transform: rotate(13.088deg);
+}
+
+.ErrorPageImghome {
+    width: 30%;
+    object-fit: cover;
+}
+
+.ErrorPageH1 {
+    margin: 0;
+    color: #F69D4B;
+    font-family: 'Yeseva One', cursive;
+    font-size: clamp(88px, 3vw, 150px);
+}
+
+.ErrorPageTexte {
+    margin: 0;
+    margin-bottom: 40px;
+    color: #F69D4B;
+    text-align: center;
+    font-family: 'Yeseva One', cursive;
+    font-size: clamp(30px, 3vw, 40px);
+}
+
+.ErrorPageBloc {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width:600px){
+
+    .ErrorPageImgVespa{
+        display: none;
+    }
+
+    .ErrorPageImghome {
+        display: none;
+    }
+
+    .ErrorPageFlex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ErrorPageBloc{
+        width: 100%;
+    }
+
+
+    
+    
+
+}

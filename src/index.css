@@ -1,13 +1,61 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Yeseva+One&display=swap");
+/* font-family: 'Quicksand', sans-serif;
+font-family: 'Yeseva One', cursive; */
+
+/* VARIABLES */
+:root {
+  --orange: #f69d4b;
+  --green: #a2de96;
+  --white: #fefefe;
+  --black: #1f1b3b;
+  --grey: #e7e7e7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Quicksand", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+display: flex;
+flex-direction: column;
+height: 100vh;
+}
+
+main {
+  margin: 0 50px;
+  padding-top: 120px;
+  flex: 1;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+/* Pour que tous les titres aient la même taille */
+
+h2 {
+  font-family: "Yeseva One", cursive;
+  font-size: clamp(23px, 3vw, 35px);
+  font-weight: normal;
+}
+
+@media (max-width: 800px) {
+  main {
+    margin: 0 20px;
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+    padding-top: 80px;
+  }
 }

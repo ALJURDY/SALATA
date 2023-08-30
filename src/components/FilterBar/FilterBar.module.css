@@ -1,0 +1,73 @@
+.FilterBarFlexCategory {
+    display: flex;
+
+}
+
+
+.FilterBarFlexDiet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.FilterBarButtonCategory {
+    padding: 10px;
+
+}
+
+.FilterBarButtonDiet {
+    padding: 10px;
+}
+
+.FilterBarH2 {
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.FilterBarSection {
+    margin-top: -220px;
+    margin-bottom: 50px;
+}
+
+.FilterBarButtonRefresh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    border: 2px solid #E7E7E7;
+    background: rgba(231, 231, 231, 0.40);
+    box-shadow: 0px 4px 0px 0px #e7e7e7;
+    padding: 7px;
+    margin-top: 12px;
+}
+
+.svgOn{
+    fill: var(--orange);
+}
+
+.svgOff path{
+    fill: var(--black);
+}
+
+.FilterBarButtonRefresh:hover {
+    cursor: pointer;
+}
+
+
+@media (max-width:542px) {
+    .FilterBarH2 {
+        height: 100px;
+    }
+
+    .FilterBarButtonCategory {
+        padding: 5px;
+
+    }
+
+    .FilterBarButtonRefresh{
+        padding: 3px;
+        border-radius: 12px;
+    }
+}

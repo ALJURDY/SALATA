@@ -1,0 +1,92 @@
+.ProductCardWidth {
+  width: 400px;
+}
+
+.ProductCardImages {
+  width: 100%;
+  border-radius: 35px;
+  object-fit: cover;
+  height: 261px;
+}
+
+.ProductCardPrice{
+  text-decoration: none;
+  color: #1a3549;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.ProductCardName {
+  color: #1a3549;
+  font-family: "Quicksand", sans-serif;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.ProductCardDescription {
+  color: #000;
+  font-family: "Quicksand", sans-serif;
+  font-size: 23px;
+  font-style: normal;
+  margin: 0 0 20px;
+}
+
+.ProductCardDiet {
+  border-radius: 35px;
+  border: 2px solid #a2de96;
+  background: rgba(162, 222, 150, 0.4);
+  color: rgba(31, 27, 59, 0.8);
+  padding: 0 5px;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0;
+  white-space: nowrap;
+}
+
+.ProductCardDiets {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.ProductCardFlex {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ProductCardId {
+  text-decoration: none;
+}
+
+.ProductCardTitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 950px) {
+  .ProductCardWidth {
+    width: 350px;
+  }
+}
+
+@media (max-width: 850px) {
+  .ProductCardWidth {
+    width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ProductCardWidth {
+    width: 100%;
+  }
+}

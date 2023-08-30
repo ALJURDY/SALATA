@@ -1,0 +1,35 @@
+.NavButton {
+  border-radius: 25px;
+  margin: 10px 0;
+  text-decoration: none;
+  color: var(--black);
+  padding: 12px 25px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  border: 2px solid #a2de96;
+  background: rgba(162, 222, 150, 0.4);
+  box-shadow: 0px 4px 0px #a2de96;
+}
+
+.NavButton:hover {
+  cursor: pointer;
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.NavButtonSecondary {
+  min-width: 220px;
+  width: 80%;
+  border: 2px solid #f9b175;
+  background: rgba(246, 157, 75, 0.36);
+  box-shadow: 0px 4px 0px #f9b175;
+}
+
+@media (max-width: 400px) {
+  .NavButton {
+    padding: 7px 20px;
+  }
+  .NavButtonSecondary {
+    padding: 12px 25px;
+  }
+}
