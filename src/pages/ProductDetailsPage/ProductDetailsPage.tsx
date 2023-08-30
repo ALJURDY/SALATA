@@ -26,6 +26,7 @@ const ProductDetailsPage = () => {
 
 
   const navigateToHome = () => {
+    
     navigate('/#Commande');
   };
 
