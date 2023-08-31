@@ -17,7 +17,10 @@ Une cliente souhaitant créer un restaurant parisien a fait appel à notre soci�
 
 Ces deux pages fonctionnent grâce au contexte de React qui permet de garder en mémoire les produits choisis par le client et ses informations personnelles. Deux contextes distincts pour les informations et fonctions relatives au panier et pour le paiement.
 
-## 
+## Page du détails produit et de confirmation de commande 
+
+La page de détails du produit affiche tout le processus de personnalisation en manipulant les données des préférences client tout en intégrant les composants nécessaires à cet effet en utilisant les hooks React pour le contexte (du panier), useState, useParam et useNavigate.
+La page récapitulative intègre à la fois les contextes de paiement et de panier pour afficher les données et fonctions relatives.
 
 
 ## Projet presque Parfait Home Page - Compte Rendu Fama Niasse 
