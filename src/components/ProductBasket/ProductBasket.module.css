@@ -32,6 +32,7 @@
 
 .basketCard .cross:hover {
   cursor: pointer;
+  transition: all 0.2;
 }
 
 .basketCard .topline,

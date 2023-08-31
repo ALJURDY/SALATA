@@ -5,30 +5,24 @@ import FilterBar from "../../components/FilterBar/FilterBar";
 import ProductList from "../../components/ProductList/ProductList";
 
 const HomePage = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>("tout");
-  const [selectedDiet, setSelectedDiet] = useState<DietType | null>(null);
 
-  const handleSetSelectedCategory = (category: string | null) => {
-    setSelectedCategory(category);
-  };
-
-  const handleDietClick = (diet: DietType | null) => {
-    setSelectedDiet(diet);
-  };
+  // Hooks pour chaque rangée de boutons
+  const [selectedCategory, setSelectedCategory] = useState<string>("tout");
+  const [selectedDiets, setSelectedDiets] = useState<DietType[] | []>([]);
 
   return (
     <>
       <Hero />
       <main>
         <FilterBar
-          setSelectedCategory={handleSetSelectedCategory}
+          setSelectedCategory={setSelectedCategory}
           activeCategory={selectedCategory}
-          setSelectedDiet={handleDietClick}
-          activeDiet={selectedDiet}
+          setSelectedDiets={setSelectedDiets}
+          activeDiets={selectedDiets}
         />
         <ProductList
-          selectedCategory={selectedCategory === "tout" ? null : selectedCategory}
-          selectedDiet={selectedDiet}
+          selectedCategory={selectedCategory}
+          selectedDiets={selectedDiets}
         />
       </main>
     </>
