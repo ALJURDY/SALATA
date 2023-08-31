@@ -2,14 +2,14 @@
 
 **Production :** https://salata-bar.netlify.app/
 
-Une cliente souhaitant créer un restaurant parisien a fait appel à notre société pour la création de l'interface des bornes de commande de son établissement. Les bornes de commande seront au format desktop et le site peut aussi être utilisé sur mobile, il sera donc responsive.
+Une cliente souhaitant créer un restaurant parisien a fait appel à notre société pour la création de l'interface des bornes de commande de son établissement. Les bornes de commande seront au format desktop et le site peut aussi être utilisé sur mobile, il sera donc responsive.  
 (Projet fictif dans le cadre de notre formation Dev. web et web mobile)
 
 **Répartition de la création des features dans l'équipe :**
 
-🥗 - Fahed : page de détails produit et de confirmation de commande
-🥗 - Fama : page d'accueil et page d'erreur 404
-🥗 - Clara : pages du panier et du formulaire de paiement
+🥗 - Fahed : page de détails produit et de confirmation de commande   
+🥗 - Fama : page d'accueil et page d'erreur 404  
+🥗 - Clara : pages du panier et du formulaire de paiement  
 
 ## Page panier et page de paiement
 
