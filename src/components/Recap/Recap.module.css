@@ -51,4 +51,14 @@
   .horizontalBar {
     width: 100%;
   }
+
+  .sectionRecap {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sectionRecap button {
+    align-self: center;
+    width: 80%;
+  }
 }
