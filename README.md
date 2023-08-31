@@ -1,5 +1,7 @@
 # Salata • Salad Bar • Go green or go home 
 
+![Salad Bar](https://github.com/ALJURDY/SALATA/assets/101406252/adb566c9-7b57-4942-b8d2-41f54f17dc8e)
+
 **Production :** https://salata-bar.netlify.app/
 
 Une cliente souhaitant créer un restaurant parisien a fait appel à notre société pour la création de l'interface des bornes de commande de son établissement. Les bornes de commande seront au format desktop et le site peut aussi être utilisé sur mobile, il sera donc responsive.  
