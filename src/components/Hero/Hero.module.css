@@ -30,6 +30,15 @@
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
   font-size: clamp(12px, 4vw, 40px);
+  animation: bounce 0.35s ease infinite alternate;
+}
+
+/* Défini l'animation bounce utilisée juste au dessus dans HeroCommande
+  Pour faire bouger le bouton Commander
+*/
+@keyframes bounce{
+  from {transform: translateY(0);}
+  to   {transform: translateY(-20px);}
 }
 
 .HeroFlecheSvg {

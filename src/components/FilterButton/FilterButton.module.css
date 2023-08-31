@@ -29,6 +29,7 @@
 .FilterButtonMenthe:hover,
 .FilterButtonTangerine:hover {
   cursor: pointer;
+  transition: all 0.2;
 }
 
 @media (max-width: 500px) {

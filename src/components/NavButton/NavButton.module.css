@@ -15,6 +15,7 @@
   cursor: pointer;
   transform: translateY(2px);
   box-shadow: none;
+  transition: all 0.2;
 }
 
 .NavButtonSecondary {
