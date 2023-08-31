@@ -46,6 +46,7 @@
 
 .Ingredients:hover {
   cursor: pointer;
+  transition: all 0.2;
 }
 
 .arrowDown,
