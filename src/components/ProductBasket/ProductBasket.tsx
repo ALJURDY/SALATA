@@ -1,4 +1,4 @@
-import { useBasketContext } from "../../context/basket.context";
+import { useBasketContext } from "../../contexts/basket.context";
 import { IProduct } from "../../mocks/products";
 import QuantityPicker from "../Quantity-Picker/Quantity-Picker";
 import style from "./ProductBasket.module.css";

@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router";
 import NavButton from "../NavButton/NavButton";
 import style from "./Recap.module.css";
-import { useBasketContext } from "../../context/basket.context";
-import { usePaymentContext } from "../../context/payment.context";
+import { useBasketContext } from "../../contexts/basket.context";
+import { usePaymentContext } from "../../contexts/payment.context";
 import PaymentModal from "../PaymentModal/PaymentModal";
 import { useState } from "react";
 

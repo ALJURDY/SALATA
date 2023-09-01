@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { useBasketContext } from "../../context/basket.context";
+import { useBasketContext } from "../../contexts/basket.context";
 import NavButton from "../NavButton/NavButton";
 import style from "./PaymentModal.module.css";
 

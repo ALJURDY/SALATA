@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import Style from "./SummaryPage.module.css";
-import { usePaymentContext } from "../../context/payment.context";
-import { useBasketContext } from "../../context/basket.context";
+import { usePaymentContext } from "../../contexts/payment.context";
+import { useBasketContext } from "../../contexts/basket.context";
 import NavButton from "../../components/NavButton/NavButton";
 
 const SummaryPage = () => {
@@ -26,19 +26,28 @@ const SummaryPage = () => {
                     <p className={Style.titres}>Récapitulatif</p>
                     <p className={Style.data}> {formData.email}</p>
                     <p className={Style.data}>{formData.firstName} {formData.lastName}</p>
-                    <p className={Style.data}>Mode de paiement : {formData.isPerCardPayment ? "Par carte bancaire" : "Payer plus tard"}</p>
+                    <p className={Style.data}>Mode de paiement : {formData.isPerCardPayment === "isPerCardPayment" ? "Par carte bancaire" : "Payer plus tard"}</p>
                     {tableNumberSection}
                 </div>
                 <div className={Style.line}></div>
                 <div className={Style.block}>
                     <p className={Style.titres}>Quantité : {getBasketQuantity()} produit
-                    {getBasketQuantity() > 1 && "s"}</p>
+                        {getBasketQuantity() > 1 && "s"}</p>
                     {products.length > 0 && (
                         <div className={Style.selectedProducts}>
                             <ul>
-                                {products.map((selectedProduct) => (
-                                    <li key={selectedProduct.product.id}>
-                                        {selectedProduct.product.name} x{selectedProduct.quantity}
+                                {products.map((basketProduct) => (
+                                    <li key={basketProduct.id}>
+                                        {basketProduct.product.name}
+                                        {basketProduct.product.extras!.length > 0 && " ("}
+                                        {basketProduct.product.extras?.map((extra, index) => (
+                                            <span key={extra.name}>
+                                                {extra.name}
+                                                {index !== basketProduct.product.extras!.length - 1 ? ", " : ""}
+                                            </span>
+                                        ))}
+                                        {basketProduct.product.extras!.length > 0 && ")"} x{" "}
+                                        {basketProduct.quantity}
                                     </li>
                                 ))}
                             </ul>
