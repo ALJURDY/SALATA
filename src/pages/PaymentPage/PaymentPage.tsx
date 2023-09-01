@@ -25,7 +25,7 @@ const PaymentPage = () => {
 
         {/* Récapitulatif du panier */}
         <section className={style.formRecap}>
-          <Recap  />
+          <Recap />
         </section>
       </section>
     </main>
