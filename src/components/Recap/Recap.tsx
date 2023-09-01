@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router";
 import NavButton from "../NavButton/NavButton";
 import style from "./Recap.module.css";
-import { useBasketContext } from "../../context/basket.context";
-import { usePaymentContext } from "../../context/payment.context";
+import { useBasketContext } from "../../contexts/basket.context";
+import { usePaymentContext } from "../../contexts/payment.context";
 import PaymentModal from "../PaymentModal/PaymentModal";
 import { useState } from "react";
 
@@ -25,6 +25,7 @@ const Recap = () => {
 
   return (
     <>
+    <section className={style.sectionRecap}>
       <h4 className={style.paymentPageTitle}>Récapitulatif</h4>
       <hr className={style.horizontalBar} />
       <p>
@@ -56,14 +57,13 @@ const Recap = () => {
       </p>
       <hr className={style.horizontalBar} />
       <p className={style.prepaRecapInfo}>Temps de préparation : 20min</p>
-        <NavButton
-          buttonText="Payer"
-          navigate={submit}
-          buttonType="secondary"
-        />
+      <NavButton buttonText="Payer" navigate={submit} buttonType="secondary" />
 
-      {/* Modale de paiement par carte */}
-      {modalDisplay && (
+    </section>
+    
+
+          {/* Modale de paiement par carte */}
+          {modalDisplay && (
         <section className={style.modalDisplay} id="paymentModal">
           <PaymentModal />
         </section>

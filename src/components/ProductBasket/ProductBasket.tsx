@@ -1,4 +1,4 @@
-import { useBasketContext } from "../../context/basket.context";
+import { useBasketContext } from "../../contexts/basket.context";
 import { IProduct } from "../../mocks/products";
 import QuantityPicker from "../Quantity-Picker/Quantity-Picker";
 import style from "./ProductBasket.module.css";
@@ -12,7 +12,7 @@ interface ProductBasketProps {
 
 const ProductBasket = (props: ProductBasketProps) => {
   const { product, quantity } = props;
-  const { deleteBasketProduct, addProductToBasket, deleteOneProduct } =
+  const { deleteBasketProduct, addProductToBasket, deleteOneProduct, getExtraTotal } =
     useBasketContext();
 
   const deleteProduct = (product: IProduct): void => {
@@ -26,8 +26,6 @@ const ProductBasket = (props: ProductBasketProps) => {
       deleteOneProduct(product);
     }
   };
-
-
 
   return (
     <article className={style.basketCard}>
@@ -71,7 +69,7 @@ const ProductBasket = (props: ProductBasketProps) => {
         {/* Prix et Quantity Picker */}
         <div className={style.bottomline}>
           <p className={style.price}>
-            {product.price.toFixed(2).replace(".", ",")} €
+            { (product.price + getExtraTotal(product.extras!)).toFixed(2).replace(".", ",")} €
           </p>
           <QuantityPicker value={quantity} onChange={handleQuantityChange} />
         </div>

@@ -1,4 +1,4 @@
-import { usePaymentContext } from "../../context/payment.context";
+import { usePaymentContext } from "../../contexts/payment.context";
 import style from "./InfoForm.module.css";
 
 const InfoForm = () => {
