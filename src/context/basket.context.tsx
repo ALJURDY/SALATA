@@ -19,6 +19,7 @@ interface IBasket {
   deleteBasketProduct: (product: IProduct) => void;
   deleteOneProduct: (product: IProduct) => void;
   clearBasket: () => void;
+  getExtraTotal: (extras: IIngredient[]) => number
 }
 
 // un panier par defaut pour éviter qu'il puisse être null
@@ -30,6 +31,7 @@ const defaultBasket: IBasket = {
   deleteBasketProduct: () => {},
   deleteOneProduct: () => {},
   clearBasket: () => {},
+  getExtraTotal: () => 0
 };
 
 const BasketContext = createContext<IBasket>(defaultBasket);
@@ -140,6 +142,7 @@ const BasketProvider = (props: BasketProviderProps) => {
     deleteBasketProduct,
     deleteOneProduct,
     clearBasket,
+    getExtraTotal
   };
 
   return (
