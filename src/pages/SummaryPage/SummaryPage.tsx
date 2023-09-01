@@ -9,6 +9,10 @@ const SummaryPage = () => {
     const { products, getBasketQuantity, getBasketTotal, clearBasket } = useBasketContext();
     const navigate = useNavigate();
 
+    const tableNumberSection = formData.tableNumber ? (
+        <p className={Style.titres}> Numéro de table : {formData.tableNumber}</p>
+    ) : null;
+
     const navigateToHome = () => {
         clearBasket();
         navigate('/#Commande');
@@ -23,7 +27,7 @@ const SummaryPage = () => {
                     <p className={Style.data}> {formData.email}</p>
                     <p className={Style.data}>{formData.firstName} {formData.lastName}</p>
                     <p className={Style.data}>Mode de paiement : {formData.isPerCardPayment ? "Par carte bancaire" : "Payer plus tard"}</p>
-                    <p className={Style.titres}> Numéro de table : {formData.tableNumber}</p>
+                    {tableNumberSection}
                 </div>
                 <div className={Style.line}></div>
                 <div className={Style.block}>
